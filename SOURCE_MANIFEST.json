@@ -2775,8 +2775,8 @@
     {
       "path": ".github/workflows/palomar-check.yml",
       "role": "manual-only official full cloud check; not dispatched",
-      "bytes": 591,
-      "sha256": "36f731e6ec40d9f59b434c21f3b8d24cc940d0e79eb0d24c388f3356409b07be"
+      "bytes": 620,
+      "sha256": "d96e06d4d3884237b1cbff49e88100d2358556458166a0c0135dbff013821e03"
     }
   ],
   "manifest_self_hash": "recorded by the enclosing private package manifest"
