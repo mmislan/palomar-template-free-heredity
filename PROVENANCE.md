@@ -1,18 +1,14 @@
 # Source correspondence
 
 The main result formalizes the central P161 v4 beta4m mission consolidated in
-the supplied canonical v2.2 manuscript. The exact literal event, deterministic
+Theorem 1 of the revised manuscript dated 20 October 2026. The exact literal event, deterministic
 seed switch and seven gross resource ceilings are preserved. The supplied
 scientific closure contains 337 new bridge/certificate modules and 106 integrated
 CTMC/functional-capacity modules. Their logical module names and source bytes
 are retained. The independent Challenge states the same model and event with
 fully fixed substantive definitions.
 
-The frozen manuscript's statements about historical computation and the scope
-of its earlier Lean evidence describe that format edition. Fresh source-bound
-strict checking and exact Comparator evidence for the selected theorem are
-separate records. Individual kernel outcomes must be read from their own
-verification records; a build or comparison does not imply those outcomes.
+The revised manuscript records the checked central finite-stock theorem. The source-bound strict checking and independent Solution kernel receipts are preserved. A fresh exact comparison and compiler source-location audit cover the explicit Challenge helpers. Verification records distinguish these checks; no new Solution kernel replay was needed for the presentation repair.
 
 The paper's other operating comparisons, resource minima, cumulative-innovation
 arguments and distinct restoration appendix retain their original conventional

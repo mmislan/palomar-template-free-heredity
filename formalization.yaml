@@ -1,7 +1,17 @@
 version: v0.4
 project:
-  name: "Chemical heredity without genetic templates"
-  description: "Acquisition and retention of catalytic function are established for a four-compartment chemical model with three prescribed catalyst types and finite resources. Starting with at least 512 copies of each of two old catalyst types per compartment, arbitrary candidate counts and arbitrary fuel occupancy, a seeding phase ends at time 30. At the fixed beta = 4,000,000 operating point, the joint mission through time 60 has failure probability at most 0.004517975690072193. It includes applicable count floors of 16 for both actual complementary daughters, 3,000,000 service credits, at least five initiating divisions per compartment after seed withdrawal, and eleven current-population recoveries interleaved with ten selected actual divisions by time 55.5. Seven simultaneous resource ceilings are enforced by one finite-stock process, with the first attempted excess entering failure. The proof connects the marked physical-time law, deterministic seed withdrawal, stopped recovery and resource accounting to the complete mission."
+  name: Chemical heredity without genetic templates
+  description: Acquisition and retention of catalytic function are established for a four-compartment
+    chemical model with three prescribed catalyst types and finite resources. Starting with at least 512
+    copies of each of two old catalyst types per compartment, arbitrary candidate counts and arbitrary
+    fuel occupancy, a seeding phase ends at time 30. At the fixed beta = 4,000,000 operating point, the
+    joint mission through time 60 has failure probability at most 0.004517975690072193. It includes applicable
+    count floors of 16 for both actual complementary daughters, 3,000,000 service credits, at least five
+    initiating divisions per compartment after seed withdrawal, and eleven current-population recoveries
+    interleaved with ten selected actual divisions by time 55.5. Seven simultaneous resource ceilings
+    are enforced by one finite-stock process, with the first attempted excess entering failure. The proof
+    connects the marked physical-time law, deterministic seed withdrawal, stopped recovery and resource
+    accounting to the complete mission.
   authors:
   - Michael Mislan
   license: Apache-2.0
@@ -15,34 +25,33 @@ classification:
   - 60J27
   - 03B35
 sources:
-- title: 'Chemical heredity without genetic templates: acquisition, reproduction and retained function'
-  type: private conventional manuscript, canonical v2.2 format edition, 19 October 2026
-  id: sha256:83d1f5111e767f5c42f647731b105b008a6564d3ef8a364cf0536593fb041993
-  location: paper/Chemical_Heredity_Canonical_v2_2.pdf
+- title: Chemical heredity without genetic templates
+  type: research manuscript, revised 20 October 2026
+  id: sha256:8c05af4ee1c4fa976c1ff337e54e14309abe45be5d6387c4f29aa0d217e7d148
+  location: paper/Chemical_Heredity_Without_Genetic_Templates.pdf
   relationship: formalizes
   contributors:
   - name: Michael Mislan
     role: human research contributor and director of the formalization
-  note: The manuscript byline remains blank. Contributor metadata is separate from bibliographic authorship.
-    The selected central P161 beta4m mission is formalized; other operating comparisons and the restoration
-    appendix retain their stated conventional or historical scope.
+  note: Theorem 1 is formalized. The other operating comparisons, contextual converse and restoration
+    theorem have conventional proofs in the manuscript.
   license: CC-BY-4.0
-- title: Essential Supplement S1, immutable October 2026 edition
-  type: finite witness data, source editions and historical evidence
-  id: sha256:867794ab98172f9a8584e7547ded6923fd547263cb20236572ebaaedd6af3710
+- title: Supplement S1 to Chemical heredity without genetic templates
+  type: finite witness data, exact-arithmetic verifier and mathematical source records
+  id: sha256:9ca61b6045573ed2fe1f12cd33ff52b2a7aa9a6cbe7aa73a6b33d44a358712a9
   location: paper/Supplement_S1.zip
   relationship: adapts
-  note: The complete literal central witness is formalized in the supplied Lean closure. Historical script
-    outputs remain historical; the original supplement and its per-file rights/provenance notices are
-    preserved.
+  note: Includes the rational table, standalone verifier, source-edition crosswalk and the preserved identity
+    of the verified formal development.
   license: mixed; original prose/data CC-BY-4.0, original code/proofs Apache-2.0, embedded third-party
     terms prevail
 related_formalizations: []
 status:
   scope: The selected theorem has only the prepared old-founder hypothesis and concludes the complete
-    beta4m finite-stock mission with failure at most4517975690072193/10^18. Local strict Lean checking,
+    beta4m finite-stock mission with failure at most 4517975690072193/10^18. Local strict Lean checking,
     exact bundled Comparator comparison and separate cold Lean/NanoDa/con-ron replay passed on source-bound
-    exports. Verification methods and outcomes are recorded in verification/LOCAL_VERIFICATION.json.
+    exports. Verification methods and outcomes are recorded in verification/LOCAL_VERIFICATION.json. The
+    named Challenge helpers passed fresh exact comparison against the preserved Solution export; see verification/CHALLENGE_REPAIR.json.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms:
@@ -63,7 +72,8 @@ automation:
       wall_time: not tracked as a reliable total; historical predecessors reused
       spend_usd: not tracked
       hardware: native Windows workstation; separately bounded local Jobs
-    prompting_notes: Formalize the complete finite-stock mission with its exact event, source law and resource bounds.
+    prompting_notes: Formalize the complete finite-stock mission with its exact event, source law and
+      resource bounds.
   spend_usd: not tracked
   notes: Research, auditing, formalization and document preparation used AI under human direction. The
     saved contributor profile records human understanding of some parts. No AI system is listed as a human
@@ -78,14 +88,14 @@ fidelity:
 review:
   status: self-assessed with mechanical verification
   reviewers: []
-  notes: The statement was compared to the frozen manuscript and exact mission contract. The independent
-    Challenge imports only pinned Mathlib and Lean. Exact exported-term comparison checks substantive
-    definitions and all49 proof-only targets with zero definition holes. Independent human peer review,
-    official cloud acceptance and registration are not asserted.
+  notes: The statement was compared with Theorem 1 of the revised manuscript. The independent Challenge
+    imports only pinned Mathlib and Lean. Exact exported-term comparison checks substantive definitions
+    and all 49 proof-only targets with zero definition holes. All selected declarations have compiler-backed
+    source locations. No independent human peer review is asserted.
 alignment:
   namespace: P161Formal
   statements:
-  - source: Central P161 v4 beta4m mission; Sections3-5 and AppendicesA-C
+  - source: Theorem 1; Sections 3–5 and Appendices A–C
     lean: P161Formal.template_free_heredity_finite_stock
     module: P161Formal.SourceFiniteMission
     status: proved

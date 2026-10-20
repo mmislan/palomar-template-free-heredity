@@ -197,9 +197,12 @@ namespace Site
 variable {c N : ℕ}
 def u (s : Site c N) (j : Fin c) : ℝ := ((s.a j : ℕ) : ℝ) / N
 def r (s : Site c N) : ℝ := if s.R then 1 else 0
-def inc (x : Fin (N + 1)) : Fin (N + 1) := ⟨min (x.val + 1) N, by omega⟩
-def dec (x : Fin (N + 1)) : Fin (N + 1) := ⟨x.val - 1, by omega⟩
-def comp (x k : Fin (N + 1)) : Fin (N + 1) := ⟨x.val - k.val, by omega⟩
+theorem inc._proof_2 (x : Fin (N + 1)) : min (x.val + 1) N < N + 1 := by sorry
+def inc (x : Fin (N + 1)) : Fin (N + 1) := ⟨min (x.val + 1) N, inc._proof_2 x⟩
+theorem dec._proof_2 (x : Fin (N + 1)) : x.val - 1 < N + 1 := by sorry
+def dec (x : Fin (N + 1)) : Fin (N + 1) := ⟨x.val - 1, dec._proof_2 x⟩
+theorem comp._proof_2 (x k : Fin (N + 1)) : x.val - k.val < N + 1 := by sorry
+def comp (x k : Fin (N + 1)) : Fin (N + 1) := ⟨x.val - k.val, comp._proof_2 x k⟩
 end Site
 abbrev Chem (c : ℕ) := (Fin 5 × Fin c) ⊕ Bool
 abbrev Split (c N : ℕ) := (Fin c → Fin (N + 1)) × Bool
@@ -250,10 +253,9 @@ structure Kernel (S : Type*) [Fintype S] where
   nonneg : ∀ x y, 0 ≤ weight x y
   total : ∀ x, ∑ y, weight x y = 1
 namespace Kernel
+theorem pmf._proof_1 (K : Kernel S) (x : S) : ∑ a, ENNReal.ofReal (K.weight x a) = 1 := by sorry
 def pmf (K : Kernel S) (x : S) : PMF S :=
-  PMF.ofFintype (fun y => ENNReal.ofReal (K.weight x y)) (by
-    rw [← ENNReal.ofReal_sum_of_nonneg (fun y _ => K.nonneg x y), K.total]
-    simp)
+  PMF.ofFintype (fun y => ENNReal.ofReal (K.weight x y)) (pmf._proof_1 K x)
 end Kernel
 namespace Rates
 end Rates
@@ -425,12 +427,15 @@ open scoped BigOperators
 noncomputable section
 variable {S : Type*} [Fintype S] [MeasurableSpace S] [MeasurableSingletonClass S]
 namespace Kernel
+theorem clockKernel._proof_1 (K : HybridCTMC.Kernel S) (Λ : ℝ) : Measurable (K.clockStep Λ) := by sorry
 def clockKernel (K : HybridCTMC.Kernel S) (Λ : ℝ) : ProbabilityTheory.Kernel S (ℝ × S) where
   toFun := K.clockStep Λ
-  measurable' := measurable_of_countable _
+  measurable' := clockKernel._proof_1 K Λ
+theorem eventKernel._proof_2 (n : ℕ) : n ∈ Finset.Iic n := by sorry
+theorem eventKernel._proof_1 : ∀ {S : Type u_1} [inst : MeasurableSpace.{u_1} S] (n : Nat), @Measurable.{u_1, u_1} ((@Subtype.{1} Nat fun (x : Nat) => @Membership.mem.{0, 0} Nat (Finset.{0} Nat) (@SetLike.instMembership.{0, 0} (Finset.{0} Nat) Nat (@Finset.instSetLike.{0} Nat)) (@Finset.Iic.{0} Nat Nat.instPreorder (@LocallyFiniteOrder.toLocallyFiniteOrderBot.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder Nat.instOrderBot) n) x) → Prod.{0, u_1} Real S) S (@MeasurableSpace.pi.{0, u_1} (@Subtype.{1} Nat fun (x : Nat) => @Membership.mem.{0, 0} Nat (Finset.{0} Nat) (@SetLike.instMembership.{0, 0} (Finset.{0} Nat) Nat (@Finset.instSetLike.{0} Nat)) (@Finset.Iic.{0} Nat Nat.instPreorder (@LocallyFiniteOrder.toLocallyFiniteOrderBot.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder Nat.instOrderBot) n) x) (fun (x : @Subtype.{1} Nat fun (x : Nat) => @Membership.mem.{0, 0} Nat (Finset.{0} Nat) (@SetLike.instMembership.{0, 0} (Finset.{0} Nat) Nat (@Finset.instSetLike.{0} Nat)) (@Finset.Iic.{0} Nat Nat.instPreorder (@LocallyFiniteOrder.toLocallyFiniteOrderBot.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder Nat.instOrderBot) n) x) => Prod.{0, u_1} Real S) fun (a : @Subtype.{1} Nat fun (x : Nat) => @Membership.mem.{0, 0} Nat (Finset.{0} Nat) (@SetLike.instMembership.{0, 0} (Finset.{0} Nat) Nat (@Finset.instSetLike.{0} Nat)) (@Finset.Iic.{0} Nat Nat.instPreorder (@LocallyFiniteOrder.toLocallyFiniteOrderBot.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder Nat.instOrderBot) n) x) => @Prod.instMeasurableSpace.{0, u_1} Real S Real.measurableSpace inst) inst fun (w : (@Subtype.{1} Nat fun (x : Nat) => @Membership.mem.{0, 0} Nat (Finset.{0} Nat) (@SetLike.instMembership.{0, 0} (Finset.{0} Nat) Nat (@Finset.instSetLike.{0} Nat)) (@Finset.Iic.{0} Nat Nat.instPreorder (@LocallyFiniteOrder.toLocallyFiniteOrderBot.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder Nat.instOrderBot) n) x) → Prod.{0, u_1} Real S) => @Prod.snd.{0, u_1} Real S (w (@Subtype.mk.{1} Nat (fun (x : Nat) => @Membership.mem.{0, 0} Nat (Finset.{0} Nat) (@SetLike.instMembership.{0, 0} (Finset.{0} Nat) Nat (@Finset.instSetLike.{0} Nat)) (@Finset.Iic.{0} Nat Nat.instPreorder (@LocallyFiniteOrder.toLocallyFiniteOrderBot.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder Nat.instOrderBot) n) x) n (@Iff.mpr (@Membership.mem.{0, 0} Nat (Finset.{0} Nat) (@SetLike.instMembership.{0, 0} (Finset.{0} Nat) Nat (@Finset.instSetLike.{0} Nat)) (@Finset.Iic.{0} Nat Nat.instPreorder (@LocallyFiniteOrder.toLocallyFiniteOrderBot.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder Nat.instOrderBot) n) n) (@LE.le.{0} Nat (@Preorder.toLE.{0} Nat Nat.instPreorder) n n) (@Finset.mem_Iic.{0} Nat Nat.instPreorder (@LocallyFiniteOrder.toLocallyFiniteOrderBot.{0} Nat Nat.instPreorder Nat.instLocallyFiniteOrder Nat.instOrderBot) n n) (@le_rfl.{0} Nat Nat.instPreorder n)))) := by sorry
 def eventKernel (K : HybridCTMC.Kernel S) (Λ : ℝ) (n : ℕ) :
     ProbabilityTheory.Kernel (Π _ : Finset.Iic n, ℝ × S) (ℝ × S) :=
-  (K.clockKernel Λ).comap (fun w => (w ⟨n, Finset.mem_Iic.mpr le_rfl⟩).2) (by fun_prop)
+  (K.clockKernel Λ).comap (fun w => (w ⟨n, eventKernel._proof_2 n⟩).2) (eventKernel._proof_1 n)
 theorem eventKernel_markov (K : HybridCTMC.Kernel S) {Λ : ℝ} (hΛ : 0 < Λ) (n : ℕ) :
     IsMarkovKernel (K.eventKernel Λ n) := by sorry
 def eventLaw (K : HybridCTMC.Kernel S) (Λ : ℝ) (hΛ : 0 < Λ) (x : S) :
@@ -504,7 +509,7 @@ theorem core_channel_bound {p : Par} (hp : p.Valid) (x : CoreState p) :
 def kernel {p : Par} (hp : p.Valid) : HybridCTMC.Kernel (State p) :=
   MarkedKernel.kernel (coreChannels hp) (rate_positive hp) (core_channel_bound hp)
 local instance (p : Par) : MeasurableSpace (State p) := ⊤
-local instance (p : Par) : MeasurableSingletonClass (State p) := ⟨fun _ => trivial⟩
+local instance instMeasurableSingletonClassState (p : Par) : MeasurableSingletonClass (State p) := ⟨fun _ => trivial⟩
 def eventLaw {p : Par} (hp : p.Valid) (x : CoreState p) (old : Option (Mark p)) :
     Measure (ℕ → ℝ × State p) :=
   (kernel hp).eventLaw (cf3Rate p) (rate_positive hp) (x, old)
@@ -566,9 +571,10 @@ open MeasureTheory ProbabilityTheory Preorder Set
 open scoped BigOperators ENNReal
 noncomputable section
 abbrev CutPrefix (S : Type*) (n : ℕ) := ∀ _ : Finset.Iic n, ℝ × S
+theorem cutPrefixArrival._proof_1 (n i : ℕ) (hi : i + 1 ≤ n) : i + 1 ∈ Finset.Iic n := by sorry
 def cutPrefixArrival {S : Type*} (n : ℕ) (u : CutPrefix S n) : ℝ :=
   ∑ i ∈ Finset.range n,
-    if hi : i + 1 ≤ n then max 0 (u ⟨i + 1, Finset.mem_Iic.mpr hi⟩).1 else 0
+    if hi : i + 1 ≤ n then max 0 (u ⟨i + 1, cutPrefixArrival._proof_1 n i hi⟩).1 else 0
 variable {S : Type*} [Fintype S] [MeasurableSpace S] [MeasurableSingletonClass S]
 end
 end CTMCHeredity20261019
@@ -593,10 +599,11 @@ def tail {X W : Type} {n : ℕ} (h : History X W (n + 1)) : History X W n :=
 section Construction
 variable {X W : Type} [Countable X] [MeasurableSpace X] [MeasurableSingletonClass X]
   [MeasurableSpace W]
+theorem tailKernel._proof_1 : ∀ {X W : Type} [Countable.{1} X] [inst : MeasurableSpace.{0} X] [@MeasurableSingletonClass.{0} X inst] [inst_2 : MeasurableSpace.{0} W] {n : Nat} (next : W → X) (hnext : @Measurable.{0, 0} W X inst_2 inst next) (ν : X → @MeasureTheory.Measure.{0} (CTMCHeredity20261019.V2.Operated.History X W n) (@Prod.instMeasurableSpace.{0, 0} (Fin n → W) X (@MeasurableSpace.pi.{0, 0} (Fin n) (fun (a : Fin n) => W) fun (a : Fin n) => inst_2) inst)), @Measurable.{0, 0} W (@MeasureTheory.Measure.{0} (CTMCHeredity20261019.V2.Operated.History X W n) (@Prod.instMeasurableSpace.{0, 0} (Fin n → W) X (@MeasurableSpace.pi.{0, 0} (Fin n) (fun (a : Fin n) => W) fun (a : Fin n) => inst_2) inst)) inst_2 (@MeasureTheory.Measure.instMeasurableSpace.{0} (CTMCHeredity20261019.V2.Operated.History X W n) (@Prod.instMeasurableSpace.{0, 0} (Fin n → W) X (@MeasurableSpace.pi.{0, 0} (Fin n) (fun (a : Fin n) => W) fun (a : Fin n) => inst_2) inst)) (@Function.comp.{1, 1, 1} W X (@MeasureTheory.Measure.{0} (CTMCHeredity20261019.V2.Operated.History X W n) (@Prod.instMeasurableSpace.{0, 0} (Fin n → W) X (@MeasurableSpace.pi.{0, 0} (Fin n) (fun (a : Fin n) => W) fun (a : Fin n) => inst_2) inst)) ν next) := by sorry
 def tailKernel {n : ℕ} (next : W → X) (hnext : Measurable next)
     (ν : X → Measure (History X W n)) : ProbabilityTheory.Kernel W (History X W n) where
   toFun w := ν (next w)
-  measurable' := (measurable_of_countable ν).comp hnext
+  measurable' := tailKernel._proof_1 next hnext ν
 def law (κ : ProbabilityTheory.Kernel X W) (next : W → X) (hnext : Measurable next) :
     (n : ℕ) → X → Measure (History X W n)
   | 0, x => Measure.dirac ((fun i : Fin 0 => Fin.elim0 i), x)
@@ -615,7 +622,7 @@ open CF3Marked CF3RawPathLift
 open scoped BigOperators ENNReal Classical
 noncomputable section
 local instance (p : Par) : MeasurableSpace (SourceState p) := ⊤
-local instance (p : Par) : MeasurableSingletonClass (SourceState p) := ⟨fun _ => trivial⟩
+local instance instMeasurableSingletonClassSourceState (p : Par) : MeasurableSingletonClass (SourceState p) := ⟨fun _ => trivial⟩
 local instance (p : Par) : MeasurableSpace (CF3MarkedKernel.State p) := ⊤
 local instance (p : Par) : MeasurableSingletonClass (CF3MarkedKernel.State p) := ⟨fun _ => trivial⟩
 local instance (p : Par) : MeasurableSpace (Option (Mark p)) := ⊤
@@ -625,9 +632,10 @@ abbrev Segment (p : Par) := MarkedPath p × RawPath p
 abbrev History (p : Par) (n : ℕ) := Operated.History (SourceState p) (Segment p) n
 def rawPair (p : Par) (x : SourceState p) (w : MarkedPath p) : Segment p :=
   (w, rawSequence p x w)
+theorem segmentKernel._proof_1 : ∀ {p : FunctionalCapacity.Par} (hp : FunctionalCapacity.Par.Valid p), @Measurable.{0, 0} (CTMCHeredity20261019.SourceState p) (@MeasureTheory.Measure.{0} (CTMCHeredity20261019.V2.RawOperated.Segment p) (@Prod.instMeasurableSpace.{0, 0} (CTMCHeredity20261019.CF3RawPathLift.MarkedPath p) (CTMCHeredity20261019.V2.RawOperated.RawPath p) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State p)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State p) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceState p)) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.SourceState p)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.SourceState p) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState p)))) (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState p) (@MeasureTheory.Measure.instMeasurableSpace.{0} (CTMCHeredity20261019.V2.RawOperated.Segment p) (@Prod.instMeasurableSpace.{0, 0} (CTMCHeredity20261019.CF3RawPathLift.MarkedPath p) (CTMCHeredity20261019.V2.RawOperated.RawPath p) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State p)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State p) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceState p)) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.SourceState p)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.SourceState p) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState p)))) fun (x : CTMCHeredity20261019.SourceState p) => @MeasureTheory.Measure.map.{0, 0} (CTMCHeredity20261019.CF3RawPathLift.MarkedPath p) (CTMCHeredity20261019.V2.RawOperated.Segment p) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State p)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State p) Real.measurableSpace (CTMCHeredity20261019.CF3MarkedKernel.instMeasurableSpaceState p)) (@Prod.instMeasurableSpace.{0, 0} (CTMCHeredity20261019.CF3RawPathLift.MarkedPath p) (CTMCHeredity20261019.V2.RawOperated.RawPath p) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State p)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State p) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceState p)) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.SourceState p)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.SourceState p) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState p))) (CTMCHeredity20261019.V2.RawOperated.rawPair p x) (@CTMCHeredity20261019.CF3MarkedKernel.eventLaw p hp (@CTMCHeredity20261019.coreProject p x) (@Option.none.{0} (CTMCHeredity20261019.CF3Marked.Mark p))) := by sorry
 def segmentKernel {p : Par} (hp : p.Valid) : ProbabilityTheory.Kernel (SourceState p) (Segment p) where
   toFun x := (CF3MarkedKernel.eventLaw hp (coreProject x) none).map (rawPair p x)
-  measurable' := measurable_of_countable _
+  measurable' := segmentKernel._proof_1 hp
 def nextState (p : Par) (T : ℝ) (s : Segment p) : SourceState p :=
   sourceResetQ (timedState T s.2)
 theorem measurable_nextState (p : Par) (T : ℝ) : Measurable (nextState p T) := by sorry
@@ -656,11 +664,10 @@ local instance (p : Par) : MeasurableSingletonClass (CF3MarkedKernel.State p) :=
 def blockDuration : ℝ := 1 / 10
 abbrev PhaseHistory := RawOperated.History seedOff 300
 abbrev TwoPhaseHistory := PhaseHistory × PhaseHistory
+theorem afterSwitchKernel._proof_1 : @Measurable.{0, 0} CTMCHeredity20261019.V2.SeedSwitch.PhaseHistory (@MeasureTheory.Measure.{0} (CTMCHeredity20261019.V2.RawOperated.History CTMCHeredity20261019.canonicalSeedFreeCF3 (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) (@Prod.instMeasurableSpace.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300))) → CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.canonicalSeedFreeCF3) (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3) (@MeasurableSpace.pi.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) (fun (a : Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) => CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.canonicalSeedFreeCF3) fun (a : Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) => @Prod.instMeasurableSpace.{0, 0} (CTMCHeredity20261019.CF3RawPathLift.MarkedPath CTMCHeredity20261019.canonicalSeedFreeCF3) (CTMCHeredity20261019.V2.RawOperated.RawPath CTMCHeredity20261019.canonicalSeedFreeCF3) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State CTMCHeredity20261019.canonicalSeedFreeCF3)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State CTMCHeredity20261019.canonicalSeedFreeCF3) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceState CTMCHeredity20261019.canonicalSeedFreeCF3)) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState CTMCHeredity20261019.canonicalSeedFreeCF3))) (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState CTMCHeredity20261019.canonicalSeedFreeCF3))) (@Prod.instMeasurableSpace.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300))) → CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.V2.SeedSwitch.seedOff) (CTMCHeredity20261019.SourceState CTMCHeredity20261019.V2.SeedSwitch.seedOff) (@MeasurableSpace.pi.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) (fun (a : Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) => CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.V2.SeedSwitch.seedOff) fun (a : Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) => @Prod.instMeasurableSpace.{0, 0} (CTMCHeredity20261019.CF3RawPathLift.MarkedPath CTMCHeredity20261019.V2.SeedSwitch.seedOff) (CTMCHeredity20261019.V2.RawOperated.RawPath CTMCHeredity20261019.V2.SeedSwitch.seedOff) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State CTMCHeredity20261019.V2.SeedSwitch.seedOff)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State CTMCHeredity20261019.V2.SeedSwitch.seedOff) Real.measurableSpace (CTMCHeredity20261019.V2.SeedSwitch.instMeasurableSpaceState CTMCHeredity20261019.V2.SeedSwitch.seedOff)) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.SourceState CTMCHeredity20261019.V2.SeedSwitch.seedOff)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.SourceState CTMCHeredity20261019.V2.SeedSwitch.seedOff) Real.measurableSpace (CTMCHeredity20261019.V2.SeedSwitch.instMeasurableSpaceSourceState CTMCHeredity20261019.V2.SeedSwitch.seedOff))) (CTMCHeredity20261019.V2.SeedSwitch.instMeasurableSpaceSourceState CTMCHeredity20261019.V2.SeedSwitch.seedOff)) (@MeasureTheory.Measure.instMeasurableSpace.{0} (CTMCHeredity20261019.V2.RawOperated.History CTMCHeredity20261019.canonicalSeedFreeCF3 (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) (@Prod.instMeasurableSpace.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300))) → CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.canonicalSeedFreeCF3) (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3) (@MeasurableSpace.pi.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) (fun (a : Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) => CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.canonicalSeedFreeCF3) fun (a : Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) => @Prod.instMeasurableSpace.{0, 0} (CTMCHeredity20261019.CF3RawPathLift.MarkedPath CTMCHeredity20261019.canonicalSeedFreeCF3) (CTMCHeredity20261019.V2.RawOperated.RawPath CTMCHeredity20261019.canonicalSeedFreeCF3) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State CTMCHeredity20261019.canonicalSeedFreeCF3)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State CTMCHeredity20261019.canonicalSeedFreeCF3) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceState CTMCHeredity20261019.canonicalSeedFreeCF3)) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState CTMCHeredity20261019.canonicalSeedFreeCF3))) (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState CTMCHeredity20261019.canonicalSeedFreeCF3))) (@Function.comp.{1, 1, 1} CTMCHeredity20261019.V2.SeedSwitch.PhaseHistory CTMCHeredity20261019.V2.SeedSwitch.Raw (@MeasureTheory.Measure.{0} (CTMCHeredity20261019.V2.RawOperated.History CTMCHeredity20261019.canonicalSeedFreeCF3 (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) (@Prod.instMeasurableSpace.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300))) → CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.canonicalSeedFreeCF3) (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3) (@MeasurableSpace.pi.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) (fun (a : Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) => CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.canonicalSeedFreeCF3) fun (a : Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300)))) => @Prod.instMeasurableSpace.{0, 0} (CTMCHeredity20261019.CF3RawPathLift.MarkedPath CTMCHeredity20261019.canonicalSeedFreeCF3) (CTMCHeredity20261019.V2.RawOperated.RawPath CTMCHeredity20261019.canonicalSeedFreeCF3) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State CTMCHeredity20261019.canonicalSeedFreeCF3)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.CF3MarkedKernel.State CTMCHeredity20261019.canonicalSeedFreeCF3) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceState CTMCHeredity20261019.canonicalSeedFreeCF3)) (@MeasurableSpace.pi.{0, 0} Nat (fun (a : Nat) => Prod.{0, 0} Real (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3)) fun (a : Nat) => @Prod.instMeasurableSpace.{0, 0} Real (CTMCHeredity20261019.SourceState CTMCHeredity20261019.canonicalSeedFreeCF3) Real.measurableSpace (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState CTMCHeredity20261019.canonicalSeedFreeCF3))) (CTMCHeredity20261019.V2.RawOperated.instMeasurableSpaceSourceState CTMCHeredity20261019.canonicalSeedFreeCF3))) (fun (y : CTMCHeredity20261019.V2.SeedSwitch.Raw) => @CTMCHeredity20261019.V2.RawOperated.rawLaw CTMCHeredity20261019.canonicalSeedFreeCF3 CTMCHeredity20261019.canonicalSeedFree_valid CTMCHeredity20261019.V2.SeedSwitch.blockDuration (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300))) y) fun (h : CTMCHeredity20261019.V2.SeedSwitch.PhaseHistory) => @CTMCHeredity20261019.sourceResetAll CTMCHeredity20261019.canonicalSeedFreeCF3 (@Prod.snd.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 300) (instOfNatNat (nat_lit 300))) → CTMCHeredity20261019.V2.RawOperated.Segment CTMCHeredity20261019.V2.SeedSwitch.seedOff) (CTMCHeredity20261019.SourceState CTMCHeredity20261019.V2.SeedSwitch.seedOff) h)) := by sorry
 def afterSwitchKernel : ProbabilityTheory.Kernel PhaseHistory PhaseHistory where
   toFun h := RawOperated.rawLaw canonicalSeedFree_valid blockDuration 300 (sourceResetAll h.2)
-  measurable' := (measurable_of_countable
-    (fun y : Raw => RawOperated.rawLaw canonicalSeedFree_valid blockDuration 300 y)).comp
-      ((measurable_of_countable (sourceResetAll (p := seedOff))).comp measurable_snd)
+  measurable' := afterSwitchKernel._proof_1
 def switchedLaw (x : Raw) : Measure TwoPhaseHistory :=
   (RawOperated.rawLaw seedOn_valid blockDuration 300 (sourceResetAll x)).compProd
     afterSwitchKernel
@@ -688,9 +695,10 @@ open MeasureTheory ProbabilityTheory Preorder Set HybridCTMC.Kernel
 open scoped ENNReal Classical
 noncomputable section
 abbrev Path (S : Type*) := ℕ → ℝ × S
+theorem prefixSplice._proof_1 (n k : ℕ) (hk : k ≤ n) : k ∈ Finset.Iic n := by sorry
 def prefixSplice {S : Type*} (n : ℕ) (T : ℝ)
     (z : CutPrefix S n × Path S) : Path S := fun k =>
-  if hk : k ≤ n then z.1 ⟨k, Finset.mem_Iic.mpr hk⟩
+  if hk : k ≤ n then z.1 ⟨k, prefixSplice._proof_1 n k hk⟩
   else if k = n + 1 then
     (T - cutPrefixArrival n z.1 + (z.2 1).1, (z.2 1).2)
   else z.2 (k - n)
@@ -764,11 +772,10 @@ local instance (p : Par) : MeasurableSpace (CF3MarkedKernel.State p) := ⊤
 local instance (p : Par) : MeasurableSingletonClass (CF3MarkedKernel.State p) :=
   ⟨fun _ => trivial⟩
 abbrev Completion := SeedSwitch.TwoPhaseHistory × MarkedPath seedOff
+theorem terminalKernel._proof_1 : Measurable ((fun y : Raw => CF3MarkedKernel.eventLaw canonicalSeedFree_valid (coreProject y) none) ∘ (fun h : SeedSwitch.TwoPhaseHistory => h.2.2)) := by sorry
 def terminalKernel : ProbabilityTheory.Kernel SeedSwitch.TwoPhaseHistory (MarkedPath seedOff) where
   toFun h := CF3MarkedKernel.eventLaw canonicalSeedFree_valid (coreProject h.2.2) none
-  measurable' := (measurable_of_countable (fun y : Raw =>
-    CF3MarkedKernel.eventLaw canonicalSeedFree_valid (coreProject y) none)).comp
-      (measurable_snd.comp measurable_snd)
+  measurable' := terminalKernel._proof_1
 def completedSwitchLaw (x : Raw) : Measure Completion :=
   (SeedSwitch.switchedLaw x).compProd terminalKernel
 end

@@ -7,6 +7,12 @@
   "entry_lean_sources": 2,
   "files": [
     {
+      "path": ".github/workflows/palomar-check.yml",
+      "role": "manual-only official full cloud check; not dispatched",
+      "bytes": 620,
+      "sha256": "d96e06d4d3884237b1cbff49e88100d2358556458166a0c0135dbff013821e03"
+    },
+    {
       "path": ".gitignore",
       "role": "exclude generated dependency/build artifacts",
       "bytes": 68,
@@ -15,8 +21,38 @@
     {
       "path": "Challenge.lean",
       "role": "independent entry interface",
-      "bytes": 51145,
-      "sha256": "d6b65dfcaabe4b5d1c3c8fa3971be5c768e2c7bab00f42ac1cb2216b4c46e05e"
+      "bytes": 68787,
+      "sha256": "81bcb29c8d2e87e57eb880c1816d3ed515c2f51d3d0c136d46874008706d677c"
+    },
+    {
+      "path": "comparator.json",
+      "role": "exact Comparator targets; no definition holes",
+      "bytes": 2829,
+      "sha256": "4b0543f0d8a14b9d6fa0e4a1cf0f13a4dc6121695a1f0b931603e15985e728bb"
+    },
+    {
+      "path": "formalization.yaml",
+      "role": "structured source-based formalization metadata",
+      "bytes": 6288,
+      "sha256": "cd34e4831528bb63d2ecc81c961d24244bb6fc5f6f859f439395b73188f4e82b"
+    },
+    {
+      "path": "lake-manifest.json",
+      "role": "pinned build dependency record",
+      "bytes": 3672,
+      "sha256": "55fc50a5113a34e1c25ea37ebf7e9b4348e034659e1398662052237fbb351c81"
+    },
+    {
+      "path": "lakefile.lean",
+      "role": "Lake project configuration",
+      "bytes": 779,
+      "sha256": "18e464d3c29373985c15ef6732d9e941ddaed72d211ececab4a1c76137d8486c"
+    },
+    {
+      "path": "lean-toolchain",
+      "role": "pinned build dependency record",
+      "bytes": 29,
+      "sha256": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"
     },
     {
       "path": "LICENSE",
@@ -2053,82 +2089,52 @@
       "sha256": "d164a547bd5b29361a12da9d10f9345115a8611895ebc143572c84ab5df3725d"
     },
     {
-      "path": "PROVENANCE.md",
-      "role": "scientific attribution and formal/conventional boundary",
-      "bytes": 1501,
-      "sha256": "13a230cce3b9e05ebf2fd858fb98fe9d19dde28bfee3a08d82ce53b69bfddb2b"
-    },
-    {
-      "path": "README.md",
-      "role": "mathematical exposition and reproduction instructions",
-      "bytes": 4449,
-      "sha256": "053802402c19b87c6a9a4b8a70b1a82ad1a4f7e0964efabe5a20e739bdbe1d4c"
-    },
-    {
-      "path": "Solution.lean",
-      "role": "independent entry interface",
-      "bytes": 53,
-      "sha256": "a56faebf314dc3a754f93e00530069b5e2298f96047ccde845e024dea83c0998"
-    },
-    {
-      "path": "comparator.json",
-      "role": "exact Comparator targets; no definition holes",
-      "bytes": 2829,
-      "sha256": "4b0543f0d8a14b9d6fa0e4a1cf0f13a4dc6121695a1f0b931603e15985e728bb"
-    },
-    {
-      "path": "formalization.yaml",
-      "role": "structured source-based formalization metadata",
-      "bytes": 6352,
-      "sha256": "340596dc38ae71a62c21beaa63caac7c9dbf810a49eb63c208413e01ada86e2b"
-    },
-    {
-      "path": "lake-manifest.json",
-      "role": "pinned build dependency record",
-      "bytes": 3672,
-      "sha256": "55fc50a5113a34e1c25ea37ebf7e9b4348e034659e1398662052237fbb351c81"
-    },
-    {
-      "path": "lakefile.lean",
-      "role": "Lake project configuration",
-      "bytes": 779,
-      "sha256": "18e464d3c29373985c15ef6732d9e941ddaed72d211ececab4a1c76137d8486c"
-    },
-    {
-      "path": "lean-toolchain",
-      "role": "pinned build dependency record",
-      "bytes": 29,
-      "sha256": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"
-    },
-    {
-      "path": "paper/Chemical_Heredity_Canonical_v2_2.pdf",
-      "role": "frozen conventional manuscript or essential support",
-      "bytes": 507718,
-      "sha256": "83d1f5111e767f5c42f647731b105b008a6564d3ef8a364cf0536593fb041993"
-    },
-    {
       "path": "paper/Chemical_Heredity_Manuscript_Source.zip",
       "role": "frozen conventional manuscript or essential support",
-      "bytes": 37082,
-      "sha256": "2d4db32ddc261c6e79ade42fa8fb5d60d9afb962339d760ca1f3bf7cd171abb2"
+      "bytes": 45885,
+      "sha256": "8fca7a1c3d229e1f9fc3ed8bfcb91d8f33928412152e43a9925b6faa2ed1e234"
+    },
+    {
+      "path": "paper/Chemical_Heredity_Without_Genetic_Templates.pdf",
+      "role": "accompanying manuscript",
+      "bytes": 638357,
+      "sha256": "8c05af4ee1c4fa976c1ff337e54e14309abe45be5d6387c4f29aa0d217e7d148"
     },
     {
       "path": "paper/RIGHTS.md",
       "role": "frozen manuscript and supplement rights boundary",
-      "bytes": 615,
-      "sha256": "d4838bb85aef66528753b227a473e0e453de7412f5096e51e250a994ca5b7d9e"
+      "bytes": 354,
+      "sha256": "303ad0bf6dcf4a65e79a1cf80a8d86b93d4fa111bd458345a029f07b412cd393"
     },
     {
       "path": "paper/Supplement_S1.zip",
       "role": "frozen conventional manuscript or essential support",
-      "bytes": 351909,
-      "sha256": "867794ab98172f9a8584e7547ded6923fd547263cb20236572ebaaedd6af3710"
+      "bytes": 339928,
+      "sha256": "9ca61b6045573ed2fe1f12cd33ff52b2a7aa9a6cbe7aa73a6b33d44a358712a9"
+    },
+    {
+      "path": "proofs/CompositionalMemory/BinomialAllocationMeasure.lean",
+      "role": "scientific Lean source",
+      "bytes": 2331,
+      "sha256": "61b1f8ea5610b0675e9b8f2e6f0b21c7ab40d686dd29a7bd11456f3aed68f766"
+    },
+    {
+      "path": "proofs/CompositionalMemory/BinomialAllocationMoments.lean",
+      "role": "scientific Lean source",
+      "bytes": 3374,
+      "sha256": "f0e3065b461e178d4afbee8890bbf3edbf8b56e9e2d4412ef0362ca25db94171"
     },
     {
       "path": "proofs/CTMCHeredity20261019/ArrivalSlicePartition.lean",
       "role": "scientific Lean source",
       "bytes": 5898,
       "sha256": "06aa7977ee532d782711c67fd074517694981dca4db8ae7140c812407acc42fc"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CanonicalPathLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 5452,
+      "sha256": "833a55043870f26e9bd038a5ee30e6cdb5c22b164083fab61a90c229d5d37723"
     },
     {
       "path": "proofs/CTMCHeredity20261019/CF3Capped.lean",
@@ -2183,12 +2189,6 @@
       "role": "scientific Lean source",
       "bytes": 18337,
       "sha256": "a40fd2b7e642bb7da7470f7501bd7e3d7a1b49ba1d127ef38a0aef64de5d130d"
-    },
-    {
-      "path": "proofs/CTMCHeredity20261019/CanonicalPathLaw.lean",
-      "role": "scientific Lean source",
-      "bytes": 5452,
-      "sha256": "833a55043870f26e9bd038a5ee30e6cdb5c22b164083fab61a90c229d5d37723"
     },
     {
       "path": "proofs/CTMCHeredity20261019/ClockStepResidual.lean",
@@ -2465,18 +2465,6 @@
       "role": "scientific Lean source",
       "bytes": 5074,
       "sha256": "a5042f0e16c43307b784ed16f6c0a405da7d3d311f73bef5e3726b96384a5cba"
-    },
-    {
-      "path": "proofs/CompositionalMemory/BinomialAllocationMeasure.lean",
-      "role": "scientific Lean source",
-      "bytes": 2331,
-      "sha256": "61b1f8ea5610b0675e9b8f2e6f0b21c7ab40d686dd29a7bd11456f3aed68f766"
-    },
-    {
-      "path": "proofs/CompositionalMemory/BinomialAllocationMoments.lean",
-      "role": "scientific Lean source",
-      "bytes": 3374,
-      "sha256": "f0e3065b461e178d4afbee8890bbf3edbf8b56e9e2d4412ef0362ca25db94171"
     },
     {
       "path": "proofs/FunctionalCapacity/Defs.lean",
@@ -2761,22 +2749,40 @@
       "sha256": "adeb1b2ba6b46340c3826bdeee6066b56270982720c9a9c8f6cafc4316b9be61"
     },
     {
+      "path": "PROVENANCE.md",
+      "role": "scientific attribution and formal/conventional boundary",
+      "bytes": 1539,
+      "sha256": "f61372a4443e695a4a175d10e481b3c86fbb24203db3055f8ac43cdf47e4de9e"
+    },
+    {
+      "path": "README.md",
+      "role": "mathematical exposition and reproduction instructions",
+      "bytes": 4413,
+      "sha256": "ec973c1bfc492cc946e02075b210650df18b0ff51a7c96425e4fa66a869941e0"
+    },
+    {
       "path": "scripts/reproduce.py",
       "role": "validation and explicitly supervised optional replay",
       "bytes": 3154,
       "sha256": "6e6b7bfd7321531c1afadd67cc2c319819152fe0b309c02a0789a6da80ce3acb"
     },
     {
-      "path": "verification/LOCAL_VERIFICATION.json",
-      "role": "source-bound local strict/comparison/individual replay evidence",
-      "bytes": 2726,
-      "sha256": "c892e18d4ae5d964274061ee97d84b578c80fa7a58e3067c715f504f89825931"
+      "path": "Solution.lean",
+      "role": "independent entry interface",
+      "bytes": 53,
+      "sha256": "a56faebf314dc3a754f93e00530069b5e2298f96047ccde845e024dea83c0998"
     },
     {
-      "path": ".github/workflows/palomar-check.yml",
-      "role": "manual-only official full cloud check; not dispatched",
-      "bytes": 620,
-      "sha256": "d96e06d4d3884237b1cbff49e88100d2358556458166a0c0135dbff013821e03"
+      "path": "verification/CHALLENGE_REPAIR.json",
+      "role": "verification record",
+      "bytes": 482,
+      "sha256": "f763ed6928b2365f69bf1edffd06b15f78bda087c856baa478897d3b0bd33082"
+    },
+    {
+      "path": "verification/LOCAL_VERIFICATION.json",
+      "role": "source-bound local strict/comparison/individual replay evidence",
+      "bytes": 2999,
+      "sha256": "d932b73f1fcd69161ce877f41af922f08526d42b08547c723c44b4c7e3eb0938"
     }
   ],
   "manifest_self_hash": "recorded by the enclosing private package manifest"

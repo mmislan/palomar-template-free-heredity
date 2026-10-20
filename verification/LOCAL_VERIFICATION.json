@@ -55,6 +55,7 @@
   ],
   "solution_export_bytes": 377461198,
   "challenge_export_bytes": 194698578,
-  "official_cloud_report": "Not run; local evidence is not an exact-commit official cloud report",
-  "review": "Agent/self-assessed statement and source review; no independent human peer review asserted"
+  "official_cloud_report": "Full preflight passed for predecessor eb72f72f2c27da1e351e51ae2bdad4604c34cf3c in run 39464886268; this evidence applies to that commit.",
+  "review": "Agent/self-assessed statement and source review; no independent human peer review asserted",
+  "challenge_repair": "See CHALLENGE_REPAIR.json for fresh comparison of explicitly named Challenge helpers against the same Solution export."
 }

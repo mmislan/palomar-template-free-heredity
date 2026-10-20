@@ -1,0 +1,11 @@
+{
+  "challenge_sha256": "81bcb29c8d2e87e57eb880c1816d3ed515c2f51d3d0c136d46874008706d677c",
+  "challenge_lines": 961,
+  "challenge_bytes": 68787,
+  "selected_targets": 49,
+  "definition_holes": 0,
+  "source_anchor_audit": "49/49 compiler declaration ranges present",
+  "solution_export_reused_sha256": "1c593bffc67c13a121aa3bdac82d24374e7529b368bdf1213d4d0997f21f2952",
+  "status": "Exact bundled comparison and axiom audit passed",
+  "solution_proofs_unchanged": true
+}
