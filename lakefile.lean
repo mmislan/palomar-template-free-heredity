@@ -11,11 +11,11 @@ require mathlib from git
    Building Solution recursively builds only its necessary frozen closure. -/
 lean_lib ResearchProofs where
   roots := #[`proofs]
-  globs := #[]
+  globs := #[.submodules `proofs]
   leanOptions := #[⟨`warningAsError, true⟩]
 
 lean_lib P161Formal where
-  globs := #[]
+  globs := #[.submodules `P161Formal]
   leanOptions := #[⟨`warningAsError, true⟩]
 
 lean_lib Challenge where

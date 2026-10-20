@@ -2091,8 +2091,8 @@
     {
       "path": "lakefile.lean",
       "role": "Lake project configuration",
-      "bytes": 711,
-      "sha256": "25c0d4913e4a883957a14799fd96bb30b5be8d03d70f0e4b6a3063fb13554a4c"
+      "bytes": 779,
+      "sha256": "18e464d3c29373985c15ef6732d9e941ddaed72d211ececab4a1c76137d8486c"
     },
     {
       "path": "lean-toolchain",
