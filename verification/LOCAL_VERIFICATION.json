@@ -1,0 +1,60 @@
+{
+  "schema": "P161_LOCAL_VERIFICATION_V1",
+  "selected_declaration": "P161Formal.template_free_heredity_finite_stock",
+  "source_sha256": "aeff8e7dfff49551275fc2cef7299ad333b11fc6ff952ac81944bec6ffc755a7",
+  "strict_main_root": "PASS603",
+  "standard_axiom_audit": "PASS604;15 roots",
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "comparison_and_replay": [
+    {
+      "stage": "compare",
+      "status": "PASS",
+      "receipt_id": "compare_001",
+      "receipt_sha256": "fd1dede8ad1e5092b5019cf2aec3437870d44b7d5e5cabf0b2e4c4e0d67519c2",
+      "executable_sha256": "16e2c9c597d71fbbadd2b909c3fad5ea7830a4b7aa0123b93e0f3b19de7b959e",
+      "exit_code": 0,
+      "cleanup_verified": true,
+      "source_export_sha256": "1c593bffc67c13a121aa3bdac82d24374e7529b368bdf1213d4d0997f21f2952",
+      "scope": "Exact bundled compareAt/checkAxioms;49 proof-only targets;zero definition holes"
+    },
+    {
+      "stage": "leanchecker",
+      "status": "PASS",
+      "receipt_id": "leanchecker_004",
+      "receipt_sha256": "117782b2b0f9df99877a281e565827702d261aad5865f77766955e4218c4a860",
+      "executable_sha256": "344dbe9cc1c826e2a5a58e1337bb51079cdc6317931cffcc8579e8560815de85",
+      "exit_code": 0,
+      "cleanup_verified": true,
+      "source_export_sha256": "1c593bffc67c13a121aa3bdac82d24374e7529b368bdf1213d4d0997f21f2952"
+    },
+    {
+      "stage": "nanoda",
+      "status": "PASS",
+      "receipt_id": "nanoda_002",
+      "receipt_sha256": "f6e8e6701959d6609981bf62596a649cc9b8856fc796ac3e631e8853acc89507",
+      "executable_sha256": "d85480c1e8b2588cd8753583c53eb483477e2db4f6463d05fcec9ea1abf44da4",
+      "exit_code": 0,
+      "cleanup_verified": true,
+      "source_export_sha256": "1c593bffc67c13a121aa3bdac82d24374e7529b368bdf1213d4d0997f21f2952"
+    },
+    {
+      "stage": "conron",
+      "status": "PASS",
+      "receipt_id": "conron_002",
+      "receipt_sha256": "f2eefac2474e31e2d5afdd53fca6869c35c99cf9c4030a71c518b2746b27fc66",
+      "executable_sha256": "f77e4dede920208708216a67f49872fb662d64595726bf9b76b41223e46d16c9",
+      "exit_code": 0,
+      "cleanup_verified": true,
+      "source_export_sha256": "1c593bffc67c13a121aa3bdac82d24374e7529b368bdf1213d4d0997f21f2952",
+      "preserved_information": "con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)"
+    }
+  ],
+  "solution_export_bytes": 377461198,
+  "challenge_export_bytes": 194698578,
+  "official_cloud_report": "Not run; local evidence is not an exact-commit official cloud report",
+  "review": "Agent/self-assessed statement and source review; no independent human peer review asserted"
+}

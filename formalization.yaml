@@ -1,0 +1,99 @@
+version: v0.4
+project:
+  name: "Chemical heredity without genetic templates: acquisition, reproduction and retained function"
+  description: "Acquisition and retention of catalytic function are established for a four-compartment chemical model with three prescribed catalyst types and finite resources. Starting with at least 512 copies of each of two old catalyst types per compartment, arbitrary candidate counts and arbitrary fuel occupancy, a seeding phase ends at time 30. At the fixed beta = 4,000,000 operating point, the joint mission through time 60 has failure probability at most 0.004517975690072193. It includes applicable count floors of 16 for both actual complementary daughters, 3,000,000 service credits, at least five initiating divisions per compartment after seed withdrawal, and eleven current-population recoveries interleaved with ten selected actual divisions by time 55.5. Seven simultaneous resource ceilings are enforced by one finite-stock process, with the first attempted excess entering failure. The proof connects the marked physical-time law, deterministic seed withdrawal, stopped recovery and resource accounting to the complete mission."
+  authors:
+  - Michael Mislan
+  license: Apache-2.0
+  responsible_maintainers:
+  - Michael Mislan
+classification:
+  arxiv:
+  - math.PR
+  - math.LO
+  msc2020:
+  - 60J27
+  - 03B35
+sources:
+- title: 'Chemical heredity without genetic templates: acquisition, reproduction and retained function'
+  type: private conventional manuscript, canonical v2.2 format edition, 19 October 2026
+  id: sha256:83d1f5111e767f5c42f647731b105b008a6564d3ef8a364cf0536593fb041993
+  location: paper/Chemical_Heredity_Canonical_v2_2.pdf
+  relationship: formalizes
+  contributors:
+  - name: Michael Mislan
+    role: human research contributor and director of the formalization
+  note: The manuscript byline remains blank. Contributor metadata is separate from bibliographic authorship.
+    The selected central P161 beta4m mission is formalized; other operating comparisons and the restoration
+    appendix retain their stated conventional or historical scope.
+  license: CC-BY-4.0
+- title: Essential Supplement S1, immutable October 2026 edition
+  type: finite witness data, source editions and historical evidence
+  id: sha256:867794ab98172f9a8584e7547ded6923fd547263cb20236572ebaaedd6af3710
+  location: paper/Supplement_S1.zip
+  relationship: adapts
+  note: The complete literal central witness is formalized in the supplied Lean closure. Historical script
+    outputs remain historical; the original supplement and its per-file rights/provenance notices are
+    preserved.
+  license: mixed; original prose/data CC-BY-4.0, original code/proofs Apache-2.0, embedded third-party
+    terms prevail
+related_formalizations: []
+status:
+  scope: The selected theorem has only the prepared old-founder hypothesis and concludes the complete
+    beta4m finite-stock mission with failure at most4517975690072193/10^18. Local strict Lean checking,
+    exact bundled Comparator comparison and separate cold Lean/NanoDa/con-ron replay passed on source-bound
+    exports. Verification methods and outcomes are recorded in verification/LOCAL_VERIFICATION.json.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Classical.choice
+  - Quot.sound
+automation:
+  methods:
+  - method: agent
+    models:
+    - GPT-6 family; exact revision and earlier-owner models not recorded
+    framework: Codex desktop
+    tool_setup: AI-assisted Lean source development, ordinary kernel-checked tactic proofs and exact finite
+      witnesses; source-bound receipt integration; canonical bounded Windows compiler admission; independent
+      statement comparison using the bundled Lake implementation. No native_decide, custom source-law
+      axiom or Solution sorry is used.
+    cost:
+      wall_time: not tracked as a reliable total; historical predecessors reused
+      spend_usd: not tracked
+      hardware: native Windows workstation; separately bounded local Jobs
+    prompting_notes: Formalize the complete finite-stock mission with its exact event, source law and resource bounds.
+  spend_usd: not tracked
+  notes: Research, auditing, formalization and document preparation used AI under human direction. The
+    saved contributor profile records human understanding of some parts. No AI system is listed as a human
+    creator or reviewer.
+fidelity:
+  divergences: The central event, beta4m parameters and seven gross stock ceilings are unchanged. The
+    law retains auxiliary driving history together with the absorbing optional stock trace; observations
+    read stopped physical states. First attempted excess is a failure and equality at a cap is allowed.
+    The event is current-population renewal, not lineage depth, ratio fidelity, molecular ancestry or
+    open-ended evolution. Ancillary paper claims outside the selected mission are not newly asserted as
+    formal consequences.
+review:
+  status: self-assessed with mechanical verification
+  reviewers: []
+  notes: The statement was compared to the frozen manuscript and exact mission contract. The independent
+    Challenge imports only pinned Mathlib and Lean. Exact exported-term comparison checks substantive
+    definitions and all49 proof-only targets with zero definition holes. Independent human peer review,
+    official cloud acceptance and registration are not asserted.
+alignment:
+  namespace: P161Formal
+  statements:
+  - source: Central P161 v4 beta4m mission; Sections3-5 and AppendicesA-C
+    lean: P161Formal.template_free_heredity_finite_stock
+    module: P161Formal.SourceFiniteMission
+    status: proved
+    note: Applicable floors16 including both actual daughters; all600 fixed-grid service windows through60;
+      eleven first readiness recoveries and ten actual selected divisions by55.5; five initiating divisions
+      per site after30; one simultaneous finite-stock budget vector. The other48 Comparator targets are
+      proof-construction and numeric obligations supporting this one flagship, not separate submission
+      claims.
+acknowledgements: Lean, Mathlib, the bundled Comparator and configured independent kernel implementations;
+  the separately owned CTMC infrastructure source closure and its preserved provenance; Michael Mislan's
+  research direction.

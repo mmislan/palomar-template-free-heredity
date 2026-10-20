@@ -1,0 +1,2783 @@
+{
+  "schema": "P161_SOURCE_SNAPSHOT_V1",
+  "selected_declaration": "P161Formal.template_free_heredity_finite_stock",
+  "toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_revision": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "scientific_lean_sources": 443,
+  "entry_lean_sources": 2,
+  "files": [
+    {
+      "path": ".gitignore",
+      "role": "exclude generated dependency/build artifacts",
+      "bytes": 68,
+      "sha256": "798a703dedf70cb55b2fa538fe6fe03d3480cb5d6b386bc7afc5cc586d45c997"
+    },
+    {
+      "path": "Challenge.lean",
+      "role": "independent entry interface",
+      "bytes": 51145,
+      "sha256": "d6b65dfcaabe4b5d1c3c8fa3971be5c768e2c7bab00f42ac1cb2216b4c46e05e"
+    },
+    {
+      "path": "LICENSE",
+      "role": "Apache-2.0 original code/proof policy",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "NOTICE.md",
+      "role": "rights and contributor attribution",
+      "bytes": 1039,
+      "sha256": "c559ab483a939d44a95fd203a256f8ce25ac224b7250a8ef9bba672650e8c113"
+    },
+    {
+      "path": "P161Formal/BinomialRecurrence.lean",
+      "role": "scientific Lean source",
+      "bytes": 3316,
+      "sha256": "27ccc07fcf5e920710099938d9c42a6f9861202cbb5f07890b99e3f720f9884b"
+    },
+    {
+      "path": "P161Formal/BranchingBernstein.lean",
+      "role": "scientific Lean source",
+      "bytes": 9183,
+      "sha256": "d148855f8f572fb278a0ff8c2fa4d9e74039d644a01eaacee5a0843a49dfc048"
+    },
+    {
+      "path": "P161Formal/BranchingBoundary.lean",
+      "role": "scientific Lean source",
+      "bytes": 2694,
+      "sha256": "eabd6aa4785d94afab6a4d8915e26b914b3a8450ba1f56eb20852082db2a151b"
+    },
+    {
+      "path": "P161Formal/BranchingFueled.lean",
+      "role": "scientific Lean source",
+      "bytes": 6972,
+      "sha256": "77a56c865a9921d8fefbf1df35d151ca436da09ed0d8224a2617b9886fb80d57"
+    },
+    {
+      "path": "P161Formal/BranchingHighEnvelope.lean",
+      "role": "scientific Lean source",
+      "bytes": 1839,
+      "sha256": "4abee001581add6a320d6a4dfe85327a4943a69d727d8543cb35c08d2bc94f5b"
+    },
+    {
+      "path": "P161Formal/BranchingLowCertificate.lean",
+      "role": "scientific Lean source",
+      "bytes": 3591,
+      "sha256": "1e5b585f407eb4ef831ff841fcfc2aeced84d88a0f244a0050d7a6910d831b55"
+    },
+    {
+      "path": "P161Formal/BranchingLowPilot.lean",
+      "role": "scientific Lean source",
+      "bytes": 585,
+      "sha256": "d95f37b1aff5cb6eeaefcb1cb6106be58026280a98f074abe4a3d7047689d08e"
+    },
+    {
+      "path": "P161Formal/BranchingPopulationSource.lean",
+      "role": "scientific Lean source",
+      "bytes": 6407,
+      "sha256": "98d80c9a0bff1f4502927092306eec67fd1bf1bac52a551a71edc4749747ebbb"
+    },
+    {
+      "path": "P161Formal/BranchingProfile.lean",
+      "role": "scientific Lean source",
+      "bytes": 1980,
+      "sha256": "3bea42a1a88f8560a168096340da1bfe31bdfffa136062643b58356be18d0e8a"
+    },
+    {
+      "path": "P161Formal/BranchingReciprocal.lean",
+      "role": "scientific Lean source",
+      "bytes": 3325,
+      "sha256": "05def9d2bbe5f3eb399b067b6fd12d2d3c6c35c54ba798a7b69657b41f0067fd"
+    },
+    {
+      "path": "P161Formal/BranchingScalar.lean",
+      "role": "scientific Lean source",
+      "bytes": 5308,
+      "sha256": "070e7f65e4364b9cc28d1928abac96982804c812ac5d3f36f83c1355d13f2ecc"
+    },
+    {
+      "path": "P161Formal/BranchingSourceDrift.lean",
+      "role": "scientific Lean source",
+      "bytes": 4596,
+      "sha256": "3291c783df7c9ba9267ba8679ef552e8f541f45047feac2bf9a005584c3009f3"
+    },
+    {
+      "path": "P161Formal/BranchingSourceGuards.lean",
+      "role": "scientific Lean source",
+      "bytes": 3385,
+      "sha256": "4e9eb4ad78d6350eab4b979edd26eeb62bcf3c8e0c083cd4cf5f9777fc02e50e"
+    },
+    {
+      "path": "P161Formal/BranchingSourceParameters.lean",
+      "role": "scientific Lean source",
+      "bytes": 3570,
+      "sha256": "a240302b1ff94fce5c6b86d10ec16d47dec8dc6f3d4b4bdfd22102f30fa94f47"
+    },
+    {
+      "path": "P161Formal/BranchingWitnessShape.lean",
+      "role": "scientific Lean source",
+      "bytes": 4074,
+      "sha256": "ebcc7f52ff24f8f01c5eb9492882f1c283a8a7b30f49d308222a413f3b6a3959"
+    },
+    {
+      "path": "P161Formal/ChemicalDriftBounds.lean",
+      "role": "scientific Lean source",
+      "bytes": 4998,
+      "sha256": "29dde61bf1a459e5297842e8db684907bc2fb8d80c8bf5f896f94e0d6c393323"
+    },
+    {
+      "path": "P161Formal/Conservation.lean",
+      "role": "scientific Lean source",
+      "bytes": 3362,
+      "sha256": "e439c48e0123051b2d4a00146696c63bbd8325c70277dc65206cac1abd5bdb69"
+    },
+    {
+      "path": "P161Formal/Contract.lean",
+      "role": "scientific Lean source",
+      "bytes": 7505,
+      "sha256": "0337ac59cfad228525fdf8168d8ed985143eec4172e691bc3e14e38f2c5b5c1c"
+    },
+    {
+      "path": "P161Formal/CountedLiveHistory.lean",
+      "role": "scientific Lean source",
+      "bytes": 10930,
+      "sha256": "8ad2815206243ccdad2a3191317802b8acaf9c7341ee28b62658f391cb470bc3"
+    },
+    {
+      "path": "P161Formal/CountedLivePoisson.lean",
+      "role": "scientific Lean source",
+      "bytes": 7361,
+      "sha256": "c3623d57bdddd32d74473948a6a236d4dc9ae497987fd7b932d55cd5716bf3e7"
+    },
+    {
+      "path": "P161Formal/CountedPoissonBound.lean",
+      "role": "scientific Lean source",
+      "bytes": 3488,
+      "sha256": "6354b1140efcbf3821fe9d54cc0040bbb39c0ff5f4bad07c75b5f97653802483"
+    },
+    {
+      "path": "P161Formal/CountedWords.lean",
+      "role": "scientific Lean source",
+      "bytes": 4834,
+      "sha256": "8483bd6032b8d26b58649991926f1ff02d967ce25acfab3e53a8962c830b076d"
+    },
+    {
+      "path": "P161Formal/CubicRecoveryTail.lean",
+      "role": "scientific Lean source",
+      "bytes": 3662,
+      "sha256": "2b4b955741cfdd2b2246cccb101766523795fa4fa39b88d5284e7ae4f0cd84a3"
+    },
+    {
+      "path": "P161Formal/FiniteStockCoupling.lean",
+      "role": "scientific Lean source",
+      "bytes": 4533,
+      "sha256": "c8dd97c04442c41af2c14bcf24b286a64cdf6bbc4469dbda592e999881a0393c"
+    },
+    {
+      "path": "P161Formal/FuelAccounting.lean",
+      "role": "scientific Lean source",
+      "bytes": 6005,
+      "sha256": "2a771f74ac50faae11228df765728638e19e4ae28485f0f5b4fa23654a0519e3"
+    },
+    {
+      "path": "P161Formal/G60ActualProbability.lean",
+      "role": "scientific Lean source",
+      "bytes": 1553,
+      "sha256": "44f6a7f487c05c85c99f74317577de4a7b24116f2c9185557d23998fda3519d0"
+    },
+    {
+      "path": "P161Formal/G60SwitchedSourceBridge.lean",
+      "role": "scientific Lean source",
+      "bytes": 1226,
+      "sha256": "7bab766c2e770ba11d108d0016ca7bd308138004f3e650427ab25638b5fee106"
+    },
+    {
+      "path": "P161Formal/GeometricRecoveryTail.lean",
+      "role": "scientific Lean source",
+      "bytes": 5065,
+      "sha256": "9ed0810ad63b531c497a6a502bb0c2240c8cf0b6196a4ab371c0d47c4087bc79"
+    },
+    {
+      "path": "P161Formal/LiteralTableBridge.lean",
+      "role": "scientific Lean source",
+      "bytes": 4590,
+      "sha256": "8f24d43ed959cf9f977ef7361874c96564ce924ea00afbd3602d572d7a721179"
+    },
+    {
+      "path": "P161Formal/LowProfileData.lean",
+      "role": "scientific Lean source",
+      "bytes": 25220,
+      "sha256": "647fcbe13d8e857dc6b6a1c293547eab63dc3ccc667d02c9b0c18851d4e624b3"
+    },
+    {
+      "path": "P161Formal/MarkedSuboperators.lean",
+      "role": "scientific Lean source",
+      "bytes": 3324,
+      "sha256": "018648dbcf0faed005863e6b800381a5c97b4113a7ec14c6cfa49a913c68cf05"
+    },
+    {
+      "path": "P161Formal/MissionArithmetic.lean",
+      "role": "scientific Lean source",
+      "bytes": 1958,
+      "sha256": "15d373e2b7ccc25135f51c39411252ca3b2021f8b67ef5a3f9941643f60c0a4d"
+    },
+    {
+      "path": "P161Formal/ModelOperations.lean",
+      "role": "scientific Lean source",
+      "bytes": 2058,
+      "sha256": "b57514db4f6e4d46e01b5b6aa7338d897f518fb4437006d2375ce7d4a8c3775f"
+    },
+    {
+      "path": "P161Formal/PairedBinomialMoment.lean",
+      "role": "scientific Lean source",
+      "bytes": 2727,
+      "sha256": "e95bc19e653d5cd64b5882d5bf0bfb7a14912f36f1ffaa2c45efbdedfc9c065d"
+    },
+    {
+      "path": "P161Formal/PairedTableMoment.lean",
+      "role": "scientific Lean source",
+      "bytes": 2120,
+      "sha256": "9b3a8d809132e02407d232b183d5ef3401f1f38edad1c10a769ca7bca50f4284"
+    },
+    {
+      "path": "P161Formal/PoissonWords.lean",
+      "role": "scientific Lean source",
+      "bytes": 2718,
+      "sha256": "d9cef04bc49bee8ca8cf17cbaba2da8b323a4b5001736f1a0b1a6244d1f46c23"
+    },
+    {
+      "path": "P161Formal/ProfileData.lean",
+      "role": "scientific Lean source",
+      "bytes": 55725,
+      "sha256": "838df428f2840e332e5b0ac54ea2abed3b98a0e2699e2c4ccd0894453d034a2c"
+    },
+    {
+      "path": "P161Formal/Quantitative.lean",
+      "role": "scientific Lean source",
+      "bytes": 1915,
+      "sha256": "38b5d7cc55a18fd0fbde974fc722c1f43459b4dc0aa4b5440b66ad7d7757e85f"
+    },
+    {
+      "path": "P161Formal/RecoveryProfile.lean",
+      "role": "scientific Lean source",
+      "bytes": 2885,
+      "sha256": "12d3c325d7a033dae5e00d598ef8fc4b2737b3a39d76fa4e2eff7b95542d2ef9"
+    },
+    {
+      "path": "P161Formal/ResetAggregation.lean",
+      "role": "scientific Lean source",
+      "bytes": 3576,
+      "sha256": "47a9c9697e9dbef9de359ccf4e0c14cd2e8a69f8c8104cbe23148843d7d62d43"
+    },
+    {
+      "path": "P161Formal/ResetCertificate.lean",
+      "role": "scientific Lean source",
+      "bytes": 13290,
+      "sha256": "dee06474ae18266bf9deab85aa5d5f9a0e3e0259d58feb0147fea7064477fe69"
+    },
+    {
+      "path": "P161Formal/ResetCertificateInterface.lean",
+      "role": "scientific Lean source",
+      "bytes": 1417,
+      "sha256": "04b5a1b62a75526eba53b4553dc85d3373f554261cfa352a0594da30b932604e"
+    },
+    {
+      "path": "P161Formal/ResetChecker.lean",
+      "role": "scientific Lean source",
+      "bytes": 2162,
+      "sha256": "8ccbbb32f28f0d61dafd7d6e2072414c91d6da53eebd701e9988591b5cb85980"
+    },
+    {
+      "path": "P161Formal/ResetCheckerSoundness.lean",
+      "role": "scientific Lean source",
+      "bytes": 2351,
+      "sha256": "f060d9b88ea164376bc00877dfb683d8833b7c87d9e511d000df0ec254c19a65"
+    },
+    {
+      "path": "P161Formal/ResetPilots.lean",
+      "role": "scientific Lean source",
+      "bytes": 895,
+      "sha256": "3ad8056e70551f2a69315292bc1f35b879c7e503c41dd88c707b8ce71cbbf6d3"
+    },
+    {
+      "path": "P161Formal/ResetRows1008To1023.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "b50090ffe6dad438d16986608ff437e064e4461f832759305401f73636fcb25f"
+    },
+    {
+      "path": "P161Formal/ResetRows1024To1039.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "ea6df2072354d672cb2fed19cbc520a998c9cc49a083a29ab46af08283c1e88f"
+    },
+    {
+      "path": "P161Formal/ResetRows1040To1055.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "4d89c95602a13d9db7cfc5957ff90524aae1daf2d0aa16e63558eb944343f3f1"
+    },
+    {
+      "path": "P161Formal/ResetRows1056To1071.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "5d7f900237fa740c67ed08b0a5b6e1ac4f88606cd67ef9e1a45684ab553c9ee1"
+    },
+    {
+      "path": "P161Formal/ResetRows1072To1087.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "11f6f87e1daa11b8cd363c4c3fe4e8d5f0b6fbdd0a297caf7abb4e2b1bf482ec"
+    },
+    {
+      "path": "P161Formal/ResetRows1088To1103.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "cdd73c01a31f8fb9abe91961c27c28119d3b21ad2c92f015475b80ba6b8856a6"
+    },
+    {
+      "path": "P161Formal/ResetRows1104To1119.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "152b3edacaa9eb1ac10636925741184549a74ed78d3f43be55e5c81a0a41e61f"
+    },
+    {
+      "path": "P161Formal/ResetRows1120To1135.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "a1618a1ea57f58e94625e49df7f46e2707d39315ee5ef3bb8f146a0901e2e4bc"
+    },
+    {
+      "path": "P161Formal/ResetRows112To127.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "987515e85fb4ee68cd6699a71c16a9bff3b5623ed0dab20622e0c0d7b1b0e6d5"
+    },
+    {
+      "path": "P161Formal/ResetRows1136To1151.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "eacdd4e5ac7b177e13cc5df00f8d4b47118292b9239565edd982652ae5a85513"
+    },
+    {
+      "path": "P161Formal/ResetRows1152To1167.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "79a31ea3013282fa1d261953489e1fca82982e720cbc0555ff4e6dbbe79dd47f"
+    },
+    {
+      "path": "P161Formal/ResetRows1168To1183.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "a69abecf8bdf1b554d23d96882f11bffb71f42c3081aa09f4452fd03237a4b00"
+    },
+    {
+      "path": "P161Formal/ResetRows1184To1199.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "ad0b475da1cabac8fe94ff83237eedc8d1118e7e77cd13a44ad07e834ca86cfb"
+    },
+    {
+      "path": "P161Formal/ResetRows1200To1215.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "715fed9b80a888803e326f3467f75b4ef411e04ea03794927f018c43260ae3b4"
+    },
+    {
+      "path": "P161Formal/ResetRows1216To1231.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "a1814a132c0ffa7423a244bac5533a0300280e6568c8d067cbbba40a6c0edfb2"
+    },
+    {
+      "path": "P161Formal/ResetRows1232To1247.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "37c2e71a36faff495a0e03160badb4558747714269b8c7778fa40a5e97b9794e"
+    },
+    {
+      "path": "P161Formal/ResetRows1248To1263.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "7f8681d804c238784bd1f472bad914d436a076db77f89584ae0514d4c48f52d0"
+    },
+    {
+      "path": "P161Formal/ResetRows1264To1279.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "54b4c981a3dd1d06c73290c18f21df44bca7ddab795b314d07084328340f567d"
+    },
+    {
+      "path": "P161Formal/ResetRows1280To1295.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "3ad6e414b202b0c3711136bd88e46fc8ce6d9af591cd0652c35ad56db67fc437"
+    },
+    {
+      "path": "P161Formal/ResetRows128To143.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "4c9601a94e8ace8ae236023a44fb9900e6d3d8249cf83c803e34fe49fe66c6a4"
+    },
+    {
+      "path": "P161Formal/ResetRows1296To1311.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "0fe73711ab34f61d43f79a615e3ed3e8c9101056f9775006dddcb6586c116a4b"
+    },
+    {
+      "path": "P161Formal/ResetRows1312To1327.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "0dc4ab66190650cb9fdd72a21fd80b9327184e77ca7a6dc0cd4babfdb6e3494c"
+    },
+    {
+      "path": "P161Formal/ResetRows1328To1343.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "c6c8cd30fb06074de1532b5a7f3f66c2865a8a22c233a44de769741f55c79da3"
+    },
+    {
+      "path": "P161Formal/ResetRows1344To1359.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "5602e925bd7971e11fc4acae74171965b567e599ce297817fad36d406b750162"
+    },
+    {
+      "path": "P161Formal/ResetRows1360To1375.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "f7d4563acafd0edf5d5c6ff40643eea599b70c7607b7bc5a32cdde41de2c5404"
+    },
+    {
+      "path": "P161Formal/ResetRows1376To1391.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "88f14010966562d3606f85e5b446bdc207162d433d85811595acf2e9e439a1c2"
+    },
+    {
+      "path": "P161Formal/ResetRows1392To1407.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "e05a7048843cd14ac890e99c40f9cf6174ca53ccef1ed14cba04a7ffcf51e059"
+    },
+    {
+      "path": "P161Formal/ResetRows1408To1423.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "1a57a7b5e166fee5c9f710eae8b80a06e96b7aa95e1011945598ed444db26474"
+    },
+    {
+      "path": "P161Formal/ResetRows1424To1439.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "f435fc42deae2dfb7d8ae3b6ca21722c5dfcd1671f6b579a6bc6bd78d65e2847"
+    },
+    {
+      "path": "P161Formal/ResetRows1440To1455.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "7aef84c1b47a9b58bbd5347f735f78ceeced4a5c6fe3284c999b0a4e6865e20e"
+    },
+    {
+      "path": "P161Formal/ResetRows144To159.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "4522055d11fb5ff9bc08e8ffcd9120d9067af6200fb6405f268b893046a444ea"
+    },
+    {
+      "path": "P161Formal/ResetRows1456To1471.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "bdfd88de4381ddbd9e8943bf7e1ca74ddbe7bb90092eadc71eebbb0719fe07a2"
+    },
+    {
+      "path": "P161Formal/ResetRows1472To1487.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "43fd5f6234b6542d1d07715a911c10c4f7964bedbf0eb7b74232cd92036e4c5a"
+    },
+    {
+      "path": "P161Formal/ResetRows1488To1503.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "8dea939dc050cac80ec8df0f566e5945a964f789fccad0efaf6cb7aafe14e4ff"
+    },
+    {
+      "path": "P161Formal/ResetRows1504To1519.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "59033198cc41707b2260161adb9853543e5b425356cf857cd3fef4d2fc0dbea5"
+    },
+    {
+      "path": "P161Formal/ResetRows1520To1535.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "4ecbf91729d10b33fc6cb01268c25416a2bb4f93ff74bb5f8a5d47df850a616e"
+    },
+    {
+      "path": "P161Formal/ResetRows1536To1551.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "7ff48b4248826041b62a0376b3d834ff18cc16ca3df69f58bb17088c64c1a2d3"
+    },
+    {
+      "path": "P161Formal/ResetRows1552To1567.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "1ee3b00acd1db55a1dcd3566f1509daf3c3beeb9042a6c6208be030ddccd8707"
+    },
+    {
+      "path": "P161Formal/ResetRows1568To1583.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "99da00368e96a83959c45694e9fe27b058022f3150cd4637dd29751a9a0ed23b"
+    },
+    {
+      "path": "P161Formal/ResetRows1584To1599.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "f0876cefa33d05acf686dc985e59b35ff5df6c188dc37ed795f22712f69dce76"
+    },
+    {
+      "path": "P161Formal/ResetRows1600To1615.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "7e81e6707e1da73336d2f924bc61f70de9bde0bdc751c2a2ccae302e839a6726"
+    },
+    {
+      "path": "P161Formal/ResetRows160To175.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "c1d57203ec566fec3d2a3e20de1e0ba9066bf0ec07d11b9010cc740045fd33cd"
+    },
+    {
+      "path": "P161Formal/ResetRows1616To1631.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "fe647f4230fd27c2d3746d9339a0a2db4259234b62de1706ff077e120fcc63dc"
+    },
+    {
+      "path": "P161Formal/ResetRows1632To1647.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "3b1288a7692231c22c056b36fd78ae630ee60dd6a03826acdd19171ed74115cf"
+    },
+    {
+      "path": "P161Formal/ResetRows1648To1663.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "28edbfd53ec974689d0d9e72e7d7a3a7d152c24252d45f62d08c7bf528afad5f"
+    },
+    {
+      "path": "P161Formal/ResetRows1664To1679.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "05f7cd64fd5ae78708b53bd87e7c673d3a9fdb36673c495a36edef265964da07"
+    },
+    {
+      "path": "P161Formal/ResetRows1680To1695.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "685350fa858654972b1645652538407ee611be9d88753d18198aa9e91700de8c"
+    },
+    {
+      "path": "P161Formal/ResetRows1696To1711.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "9c8457e6458084143edefdb32c8991d0d744c7ab5141ae4309b30f7c9775b379"
+    },
+    {
+      "path": "P161Formal/ResetRows16To31.lean",
+      "role": "scientific Lean source",
+      "bytes": 2193,
+      "sha256": "e9be8c3028c6d76cba06f48062082e262f8db18c9d9ad8eae7c487caea0d2eef"
+    },
+    {
+      "path": "P161Formal/ResetRows1712To1727.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "898529cd675449250cc88361b5a2e8b775cb88949c0994c60a6c7217f04c0655"
+    },
+    {
+      "path": "P161Formal/ResetRows1728To1743.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "bedcdc24d5d44b9d3c913c3d576a9d9a77f663c0c51115965b01c3edf756f233"
+    },
+    {
+      "path": "P161Formal/ResetRows1744To1759.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "a2e26a3ba9fe1620f4a231dc63e1fee8ad69a46ad7c69b41d14e74a4f885d898"
+    },
+    {
+      "path": "P161Formal/ResetRows1760To1775.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "72c560ea449c0a4c7fb0d0b6aba5584b91cf71388efcd4589fe009ef99bcddc5"
+    },
+    {
+      "path": "P161Formal/ResetRows176To191.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "b17c55e49ff30194edf7efe8c82bb699b3f22d275e3de3daf7ac8d719641382b"
+    },
+    {
+      "path": "P161Formal/ResetRows1776To1791.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "609a282e8ffd813e56a18178665a6710a0dadf902af823af11df20785fc45451"
+    },
+    {
+      "path": "P161Formal/ResetRows1792To1807.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "0155ef84102995ade73e36bdbec60389cfe7ca3b3709057637ae918c15572979"
+    },
+    {
+      "path": "P161Formal/ResetRows1808To1823.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "c9f4e3b81a27b319b2d5e3805b5b88fc35b53b3043178b0ba38645830d178d9f"
+    },
+    {
+      "path": "P161Formal/ResetRows1824To1839.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "06d6a7f4b90adbb038596cff4b4825abf2eff2ea43f01466a1f28b4b560593a1"
+    },
+    {
+      "path": "P161Formal/ResetRows1840To1855.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "15f6eaeb6071c97edd7e454ce0f7f15916fa3b890d88ef5e698e394c2863f3ad"
+    },
+    {
+      "path": "P161Formal/ResetRows1856To1871.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "2f328981a25b2ffe06889ba297f206d143b3ca1d659fb397d772ce5f3b8d33e4"
+    },
+    {
+      "path": "P161Formal/ResetRows1872To1887.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "56e30a34d5d505f49eae25f51e7df5ae39f22caeccce9c38939fd75ab7651aa5"
+    },
+    {
+      "path": "P161Formal/ResetRows1888To1903.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "bfccfbc085c1b9ee6a306ae8ab0dab2eb77927b67c13db3bc415de57261cac20"
+    },
+    {
+      "path": "P161Formal/ResetRows1904To1919.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "bcb16e28c05a5b84d1d88b57e2d712475242b477826cd0f918d3fc52333f4071"
+    },
+    {
+      "path": "P161Formal/ResetRows1920To1935.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "4ac3d65c57c385876fd162798c24b59fa0a79f6f777fa718fe7e0f4f79fe7a80"
+    },
+    {
+      "path": "P161Formal/ResetRows192To207.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "681c96547e3365bab0fa9487889a2f4afaf1af69412e188f866d20548de970f3"
+    },
+    {
+      "path": "P161Formal/ResetRows1936To1951.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "c906e95c60affd18cb6a17599fad3f0c7a1959166c5738aee843f6413a3daabf"
+    },
+    {
+      "path": "P161Formal/ResetRows1952To1967.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "dd9d38f2073d9ab54c962c0d5bd87ada0cca4ea4d7c229bfb883ccee339773c6"
+    },
+    {
+      "path": "P161Formal/ResetRows1968To1983.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "a2fdd20314296b31ad209cb23887da89943c58f3b106eee2df5d83e8f1d9206c"
+    },
+    {
+      "path": "P161Formal/ResetRows1984To1999.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "8510f4d91f0ea38dfd146deb3c0c46ece13673cff3436f5ac29d12d9c88fc6e5"
+    },
+    {
+      "path": "P161Formal/ResetRows2000To2015.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "b0094b2132802136c8bdd27c5c7ad395b4c5f04a77859be49d5126e917ef7c0b"
+    },
+    {
+      "path": "P161Formal/ResetRows2016To2031.lean",
+      "role": "scientific Lean source",
+      "bytes": 2337,
+      "sha256": "0198713667e9eb60e32cc9f87b27511876505775b7a0abf63573d94780a7388d"
+    },
+    {
+      "path": "P161Formal/ResetRows2032To2047.lean",
+      "role": "scientific Lean source",
+      "bytes": 3372,
+      "sha256": "3293c357631908efba17bed6e07763b4c207f32bc9b12c2bf6e331bc97c88066"
+    },
+    {
+      "path": "P161Formal/ResetRows2048To2048.lean",
+      "role": "scientific Lean source",
+      "bytes": 861,
+      "sha256": "e1533d3adffe859f9c5163799b6afad532db7eded3324dcd2bcdc3ab8ef0f221"
+    },
+    {
+      "path": "P161Formal/ResetRows208To223.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "4e7913baecab340411521aeb462cafd14521cb717b0a554086c3bf6b0d2a5d33"
+    },
+    {
+      "path": "P161Formal/ResetRows224To239.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "182932a59825c535462383ed61bd1b943a3b434e42669d63cece7074900874f3"
+    },
+    {
+      "path": "P161Formal/ResetRows240To255.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "9d23feaddec746821e2f876ba61b269410b346d3d9dcdb841f44c054b8953a12"
+    },
+    {
+      "path": "P161Formal/ResetRows256To271.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "d5ff257ca893c980ee1d66f238a57b0df6f98a4309f269f656b983253f5a07f0"
+    },
+    {
+      "path": "P161Formal/ResetRows272To287.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "853e08202dcf37931f46098d10047f307453058601b282cdacdfb97ea59edd58"
+    },
+    {
+      "path": "P161Formal/ResetRows288To303.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "cf9cabc29366661fee745d902d24dd63e7614e70fd92ff04d6b6d4a4692a0612"
+    },
+    {
+      "path": "P161Formal/ResetRows304To319.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "63d3f2cd0b99ea256500c19a597e1fcc239b986ab1da0c022a546ed588606f88"
+    },
+    {
+      "path": "P161Formal/ResetRows320To335.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "45f6ff646ba0a2f8768726a2c5bcd315a5ac7d253f38eb4b8bcca0b2f33cb252"
+    },
+    {
+      "path": "P161Formal/ResetRows32To47.lean",
+      "role": "scientific Lean source",
+      "bytes": 2276,
+      "sha256": "089d40f8a34f1d4d2259c26bfd5a10df5878dba3558bd524e88324a219d7b5d3"
+    },
+    {
+      "path": "P161Formal/ResetRows336To351.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "73eaa1fbfd114ff8c93c5c591df296cf73de2da4fdc3ba964885e748115755dd"
+    },
+    {
+      "path": "P161Formal/ResetRows352To367.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "253976e5df36ffed7252bc083c0a0d7235bb37e5421e0cadc03f3760140c59b1"
+    },
+    {
+      "path": "P161Formal/ResetRows368To383.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "96ccad9728ce1bcba5f92c8188ec4bd844b24ef569fbdc91ec4269c473506692"
+    },
+    {
+      "path": "P161Formal/ResetRows384To399.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "14d2add3d9730e5eb0690eb9008dfac48eed63dd4c250c524e13d0fae73c694e"
+    },
+    {
+      "path": "P161Formal/ResetRows400To415.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "95d22961a9a1f65632c042fc839da44c1df702399df5e6c23f894c5666cb7769"
+    },
+    {
+      "path": "P161Formal/ResetRows416To431.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "6dd6fbe2355415c3a65d015007032b34ccbafa9b9007ab606b8dc6b501a3bc26"
+    },
+    {
+      "path": "P161Formal/ResetRows432To447.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "e1af9be03bd1b684bd437ae39d565727e6781409c9763b7d67cb708fe2adb13d"
+    },
+    {
+      "path": "P161Formal/ResetRows448To463.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "9e9bfefac8b16d1582931739c1022a39dd3deccba7efb301a9bd030f327ef413"
+    },
+    {
+      "path": "P161Formal/ResetRows464To479.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "52e8dacc6afc0d5ff70ae7f7b971f2fd47729c4a72f349e9b1aa7a1784d93bef"
+    },
+    {
+      "path": "P161Formal/ResetRows480To495.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "ea5b84f8d17f5f227949d49141e3a93acfa3c10db16818b749561819447a4410"
+    },
+    {
+      "path": "P161Formal/ResetRows48To63.lean",
+      "role": "scientific Lean source",
+      "bytes": 2193,
+      "sha256": "4cc569ecfb3113ea0839511c0f1b6d555cff14e696ed6ca339a55e80798de45d"
+    },
+    {
+      "path": "P161Formal/ResetRows496To511.lean",
+      "role": "scientific Lean source",
+      "bytes": 2353,
+      "sha256": "43ce079179a50a3486c224f30be4e92a13640aac69c475d464c683cc8c9fac42"
+    },
+    {
+      "path": "P161Formal/ResetRows512To527.lean",
+      "role": "scientific Lean source",
+      "bytes": 2343,
+      "sha256": "3aaa98aa7a8536d4809ba9a58fc2508cd64e63b2623baccb25fb12d8131bbc70"
+    },
+    {
+      "path": "P161Formal/ResetRows528To543.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "0b99c1c53e51b2de67f949166214010629555c4ee3613c84de6c15cfd48c2ac0"
+    },
+    {
+      "path": "P161Formal/ResetRows544To559.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "1349f7e0eeee182863984c1657c4ce9ac0290e9223db38a1816281e85110a35f"
+    },
+    {
+      "path": "P161Formal/ResetRows560To575.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "8a3cbc131648dfe69a2e8c7d2dffff0303f751dad2c926987f540e2e4a6325ec"
+    },
+    {
+      "path": "P161Formal/ResetRows576To591.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "80069271715a9764a3a2f25edf7b6e050dd261bd6be8bc258e0f42c90676c5aa"
+    },
+    {
+      "path": "P161Formal/ResetRows592To607.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "f283d556fe2fcf23690c7ac1736cd77cd3c28ce69986e1d864a277b2b089947a"
+    },
+    {
+      "path": "P161Formal/ResetRows608To623.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "04408c69c255c482a5491831c9006af9138a8c51d54b2c147bc544bbaa51a88d"
+    },
+    {
+      "path": "P161Formal/ResetRows624To639.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "268bbe538413772d57ca51a96756ea157f0b0d2684d62469d0857eccbd5bf6a3"
+    },
+    {
+      "path": "P161Formal/ResetRows640To655.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "fc591c96558b0cab184e4cc22e279b0c67443cc9d3fd67055f3efe51b3bc64d8"
+    },
+    {
+      "path": "P161Formal/ResetRows64To79.lean",
+      "role": "scientific Lean source",
+      "bytes": 2193,
+      "sha256": "98043016c1963222818771f799b0104ec710f945b54278bcc46b1e076a8be953"
+    },
+    {
+      "path": "P161Formal/ResetRows656To671.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "00fec62b4967d46e836e09669cd80dbea7521552cbe6fb79611c35a14511420c"
+    },
+    {
+      "path": "P161Formal/ResetRows672To687.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "379be5762e1914e6ec6f449e896d99586755b3b57a7691ad6b00612b4ad1ea5a"
+    },
+    {
+      "path": "P161Formal/ResetRows688To703.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "f1ccfa1c227ea0b18dc3a2a8525eee9d8a1e70a454992a4846814a9970248afd"
+    },
+    {
+      "path": "P161Formal/ResetRows704To719.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "28fe902986bf75a491f36d068688df0c88978f36044b2742441198d2a306fbb1"
+    },
+    {
+      "path": "P161Formal/ResetRows720To735.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "a05d4dedea33a4e104f9d3af9b5b2566cb6922d9b03ecebd24c0374fb7a5a1fe"
+    },
+    {
+      "path": "P161Formal/ResetRows736To751.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "54b5fa0807b1704ec41c6d3b6867186f3c49357db2ca1a163dfd343d2e41f7ab"
+    },
+    {
+      "path": "P161Formal/ResetRows752To767.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "5192f7d49fccfb58a6faf81c619cd57ea5e9bac961082ed296e9474a60910f4b"
+    },
+    {
+      "path": "P161Formal/ResetRows768To783.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "999372a2cd2f42931ea81e4845dee7148254b9daac592064d8c62ce38331f8ac"
+    },
+    {
+      "path": "P161Formal/ResetRows784To799.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "cc39375041478dfd2c3514bbef3e70244b192b8ba5edbd3d01c8b0ff3f7ca655"
+    },
+    {
+      "path": "P161Formal/ResetRows800To815.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "3910e2a6effcac204f2957225d4841309175e5217881828cc6e55637ba51ef02"
+    },
+    {
+      "path": "P161Formal/ResetRows80To95.lean",
+      "role": "scientific Lean source",
+      "bytes": 2193,
+      "sha256": "b12f4db397e2c39b19d6f7f14de2049bcfb9a3063a084d121f1d5c6cd70ef1b4"
+    },
+    {
+      "path": "P161Formal/ResetRows816To831.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "1936b6d04034a1b3fffd59e8bb18852b481a55ca85bc6f68d84b65d42d0545d1"
+    },
+    {
+      "path": "P161Formal/ResetRows832To847.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "8d4f12e9e1e885808480e2f163744d5ff2d2c858ac8cb17270e3560eded93278"
+    },
+    {
+      "path": "P161Formal/ResetRows848To863.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "1a4985ee56594c0fa8277b6654dcea9787cdfda8d4aeb8937a9e00eb2a806497"
+    },
+    {
+      "path": "P161Formal/ResetRows864To879.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "14f979951ca4a3e0b2c2f59e1ddd3db7512ceb1c6ae762f80dd17c687c2c87e8"
+    },
+    {
+      "path": "P161Formal/ResetRows880To895.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "4687ff9b0950d7976e357bbf3a01009202dd7e5510d73b4ab60dca0895eeaced"
+    },
+    {
+      "path": "P161Formal/ResetRows896To911.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "601fd167783f342ebf32fc632167f91e97d55565f8055a4f744b1555d898fa91"
+    },
+    {
+      "path": "P161Formal/ResetRows912To927.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "bec5818e90cacebbda2fd8a7b0edcd71957b229f8229de36c965e0374a355363"
+    },
+    {
+      "path": "P161Formal/ResetRows928To943.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "e6a8a97ee188bef02fb546054be881807ba73a77da16beddbfd8c5ba68cc90d9"
+    },
+    {
+      "path": "P161Formal/ResetRows944To959.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "5f5faf77db21157e7c31b778a3bdaea4c8dee9fd7c02f8257ee50e3b36e6eeda"
+    },
+    {
+      "path": "P161Formal/ResetRows960To975.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "1d763364b108d1589d34e42edb400a763a1ef98a84d328ec17df072d15474ac9"
+    },
+    {
+      "path": "P161Formal/ResetRows96To111.lean",
+      "role": "scientific Lean source",
+      "bytes": 2245,
+      "sha256": "3b0b14fe47ce4290dab072279836e69295948d5afcd54d01726811a3e817a572"
+    },
+    {
+      "path": "P161Formal/ResetRows976To991.lean",
+      "role": "scientific Lean source",
+      "bytes": 2265,
+      "sha256": "bc5174c4b39db3f642ef02de62000b87cf77368bc233feb9f619cde47dba6369"
+    },
+    {
+      "path": "P161Formal/ResetRows992To1007.lean",
+      "role": "scientific Lean source",
+      "bytes": 2301,
+      "sha256": "b8a86d12fe5e66e929209c187f6366760a0d7ba0baddad1aa3e4e26f119cac03"
+    },
+    {
+      "path": "P161Formal/ResetSeparatePilot.lean",
+      "role": "scientific Lean source",
+      "bytes": 4828,
+      "sha256": "59cc29a937370c90a7920a8b67fd04a484006c928537f3862f3def07d2f27305"
+    },
+    {
+      "path": "P161Formal/ResetTableResidual.lean",
+      "role": "scientific Lean source",
+      "bytes": 2490,
+      "sha256": "0c2f4e18a5054b3163b398bb7825b59f41c54a86d8c00016ff5915e0311f6e8b"
+    },
+    {
+      "path": "P161Formal/ServiceArithmetic.lean",
+      "role": "scientific Lean source",
+      "bytes": 1812,
+      "sha256": "72f407f8a9de46d5adc1d791f57c75d504964f42592b83b1fd699ee4e0ceb247"
+    },
+    {
+      "path": "P161Formal/ServiceSourceBarrier.lean",
+      "role": "scientific Lean source",
+      "bytes": 2510,
+      "sha256": "341b552f424f43114fa732c570b38c55d6d200741c4b5c03cafd42fa8dcac210"
+    },
+    {
+      "path": "P161Formal/ServiceSourceParameters.lean",
+      "role": "scientific Lean source",
+      "bytes": 3713,
+      "sha256": "c2d63e3c08c692897cc9f47d2f3011b14d47d9a5ead35bba00b523bd47e3c82e"
+    },
+    {
+      "path": "P161Formal/SourceBranchingTicks.lean",
+      "role": "scientific Lean source",
+      "bytes": 2588,
+      "sha256": "79bea78960a51d117177feb9f7e1bca3b419e1f4f2e48f144e5b7a21764b6790"
+    },
+    {
+      "path": "P161Formal/SourceChemicalPopulation.lean",
+      "role": "scientific Lean source",
+      "bytes": 6359,
+      "sha256": "22f3a0c9a09583cb17410382c272e3dbc5838b338f36d79e8bd8e0dc2201c71d"
+    },
+    {
+      "path": "P161Formal/SourceChemicalRecovery.lean",
+      "role": "scientific Lean source",
+      "bytes": 2364,
+      "sha256": "f0a03dd505cfbf6a03b81b504df1bc201b94ab9e3d8b3881c85f8090598968cf"
+    },
+    {
+      "path": "P161Formal/SourceContractBridge.lean",
+      "role": "scientific Lean source",
+      "bytes": 6881,
+      "sha256": "d2f0fe9c31e4ca42025171e2e452a597f67249c217e25cef9a3c44baa185e475"
+    },
+    {
+      "path": "P161Formal/SourceDivisionWait.lean",
+      "role": "scientific Lean source",
+      "bytes": 6514,
+      "sha256": "8f3018982b028eb170242690d7e93b5d62012b6790b00612b1fdb679044649bf"
+    },
+    {
+      "path": "P161Formal/SourceDivisionWitness.lean",
+      "role": "scientific Lean source",
+      "bytes": 3481,
+      "sha256": "99d174c11de42950f20e39275ded8e2c5116aed01f217c5b239d9c190d687b76"
+    },
+    {
+      "path": "P161Formal/SourceFeedChemical.lean",
+      "role": "scientific Lean source",
+      "bytes": 5561,
+      "sha256": "08ae053c9fa041afceeb0cef7de6795f180f01092f6d13f826afe59685e3ad6d"
+    },
+    {
+      "path": "P161Formal/SourceFeedDivision.lean",
+      "role": "scientific Lean source",
+      "bytes": 5304,
+      "sha256": "ad69508d4ea519c262af90554ecf4fa41a45721ca0d06cf6ddc2653e7cf9c7da"
+    },
+    {
+      "path": "P161Formal/SourceFeedGenerator.lean",
+      "role": "scientific Lean source",
+      "bytes": 3629,
+      "sha256": "6e3b5f6ad500f4683347132d31c0910b049d4f580ef82acfb657007d61e9ec72"
+    },
+    {
+      "path": "P161Formal/SourceFeedKernel.lean",
+      "role": "scientific Lean source",
+      "bytes": 8344,
+      "sha256": "2a660ce50abd5e5a5a0a16fee1ed1aeba6175684f7693b65a6c17e124954b6d5"
+    },
+    {
+      "path": "P161Formal/SourceFeedTail.lean",
+      "role": "scientific Lean source",
+      "bytes": 11965,
+      "sha256": "cbf28ef29d7f9439dd9a38e7e48561f515025153d5a64c7b480c9b1a9b6e3d05"
+    },
+    {
+      "path": "P161Formal/SourceFiniteMission.lean",
+      "role": "scientific Lean source",
+      "bytes": 6312,
+      "sha256": "aeff8e7dfff49551275fc2cef7299ad333b11fc6ff952ac81944bec6ffc755a7"
+    },
+    {
+      "path": "P161Formal/SourceFiniteStock.lean",
+      "role": "scientific Lean source",
+      "bytes": 5692,
+      "sha256": "4fcb9edff4a40d861faf643fd130afdf3dec6f29bb2edd642d25b45c173679c7"
+    },
+    {
+      "path": "P161Formal/SourceFiniteStockLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 7584,
+      "sha256": "c902b56263e95d9d46400504c4e758080549b05bf8ca61496cca2201b094ca9b"
+    },
+    {
+      "path": "P161Formal/SourceFuelTilt.lean",
+      "role": "scientific Lean source",
+      "bytes": 4265,
+      "sha256": "6c96b088fb787f140ef4bfdc12b11967eef495417f3b59dd1f18f0ed3a64681d"
+    },
+    {
+      "path": "P161Formal/SourceGlobalLedger.lean",
+      "role": "scientific Lean source",
+      "bytes": 6779,
+      "sha256": "395a14f71c0d9abfcf60d89961805cc7b11929529ce2247804ce2a59bc3b55a6"
+    },
+    {
+      "path": "P161Formal/SourceGlobalObservations.lean",
+      "role": "scientific Lean source",
+      "bytes": 8485,
+      "sha256": "38893743ef714d04420c3bf3faf89b4bb2da7a9c479b25557482990bce9dd7ec"
+    },
+    {
+      "path": "P161Formal/SourceGrossLedger.lean",
+      "role": "scientific Lean source",
+      "bytes": 6398,
+      "sha256": "501291ae0e1a42134bfe53478254cc77f66af5bbd6cd979c5cb368c4401b333a"
+    },
+    {
+      "path": "P161Formal/SourceIdealMission.lean",
+      "role": "scientific Lean source",
+      "bytes": 4838,
+      "sha256": "01fe811d91f41053082aab11f3080e16177e068ebabfb808573cdeaa8f02d9ac"
+    },
+    {
+      "path": "P161Formal/SourceIdealMissionBridge.lean",
+      "role": "scientific Lean source",
+      "bytes": 6400,
+      "sha256": "db539f752d2db8537b7fa5d3cadd8fcd39e158525f75976320503a22ab0afd20"
+    },
+    {
+      "path": "P161Formal/SourceIntensity.lean",
+      "role": "scientific Lean source",
+      "bytes": 4547,
+      "sha256": "2d11988fa36a0430f4bf344847d559b151545680398a60caa088c571a622e407"
+    },
+    {
+      "path": "P161Formal/SourceMissionObservations.lean",
+      "role": "scientific Lean source",
+      "bytes": 7649,
+      "sha256": "5e32f9688e12e482815e5ebebcd74a34e3f50c632b8caa8c19e671d639b7705b"
+    },
+    {
+      "path": "P161Formal/SourcePairedSplit.lean",
+      "role": "scientific Lean source",
+      "bytes": 2274,
+      "sha256": "9d9a097d36a46b30a28631fc087f908f01f092f346da64589413a19b4a5594c0"
+    },
+    {
+      "path": "P161Formal/SourcePhysicalRecovery.lean",
+      "role": "scientific Lean source",
+      "bytes": 4200,
+      "sha256": "6dfae79cb5fe96fd39defe40fea75a9eb1f9b3e3b32eb44c57eb7f1b23f0d4fe"
+    },
+    {
+      "path": "P161Formal/SourcePostPhase.lean",
+      "role": "scientific Lean source",
+      "bytes": 5106,
+      "sha256": "39af24875ef82c7fbe5d1a6e87c9422903aa8bfb0296e5fb30c12cef29f10523"
+    },
+    {
+      "path": "P161Formal/SourcePrePhase.lean",
+      "role": "scientific Lean source",
+      "bytes": 5537,
+      "sha256": "7232a7ade4a0379ee3c127ec4b7156fd585a9bbe60dca7ffc42aa7a817df5787"
+    },
+    {
+      "path": "P161Formal/SourceRecoveryKernel.lean",
+      "role": "scientific Lean source",
+      "bytes": 5015,
+      "sha256": "dfb975d872c2e162c08d2c2ab619a0df78afc55fba5290e90725eb5ef9f1201f"
+    },
+    {
+      "path": "P161Formal/SourceRecoveryOperators.lean",
+      "role": "scientific Lean source",
+      "bytes": 4264,
+      "sha256": "3bc8f5da6a8c0ad01d34136df0e3c48c549d3be7638a500c2ae637879c6dba56"
+    },
+    {
+      "path": "P161Formal/SourceRecoveryPoisson.lean",
+      "role": "scientific Lean source",
+      "bytes": 3474,
+      "sha256": "37bc2f7ba2d9266efca9b56d90e89f5576a62d46b4d6b0dfe9ad19aee5267d5c"
+    },
+    {
+      "path": "P161Formal/SourceRecoveryTail.lean",
+      "role": "scientific Lean source",
+      "bytes": 4622,
+      "sha256": "3f45d5bff883dcad53316f87426135bf4ae750fba685c5ea647c22fd796de944"
+    },
+    {
+      "path": "P161Formal/SourceRecoveryWitness.lean",
+      "role": "scientific Lean source",
+      "bytes": 5965,
+      "sha256": "c23cf7a525fdf65ec5f93172977c8470275fe8e725f20bf602b9997ece759bf6"
+    },
+    {
+      "path": "P161Formal/SourceRenewalAudit.lean",
+      "role": "scientific Lean source",
+      "bytes": 673,
+      "sha256": "cd45e32fc830066a9cdedd5f39387d769b2c788e29de7f30b7735833f1b117b6"
+    },
+    {
+      "path": "P161Formal/SourceRenewalBound.lean",
+      "role": "scientific Lean source",
+      "bytes": 3889,
+      "sha256": "98e8d15d0340dc3ae61b6cc3a36c972e011f33cf788da2f2184a81fcb32b3a3b"
+    },
+    {
+      "path": "P161Formal/SourceRenewalGlobal.lean",
+      "role": "scientific Lean source",
+      "bytes": 9916,
+      "sha256": "a9f8516edd9d1eabd20d98f1930c71604d9b2c7daf2df016979063483a319601"
+    },
+    {
+      "path": "P161Formal/SourceRenewalObservation.lean",
+      "role": "scientific Lean source",
+      "bytes": 6803,
+      "sha256": "3e372ccf27734c69143aace013befed58ac6bd679ee2e00798930ba120bdadff"
+    },
+    {
+      "path": "P161Formal/SourceRenewalPhysical.lean",
+      "role": "scientific Lean source",
+      "bytes": 5165,
+      "sha256": "4430c129022349b0ec44e86e1f9502847d5c84e552d947adc1278b50771ffb15"
+    },
+    {
+      "path": "P161Formal/SourceRenewalProtocol.lean",
+      "role": "scientific Lean source",
+      "bytes": 5171,
+      "sha256": "64215f8c199f9d756ac0cf2642f2b8db2b8f62091cc6fac46409caa806e8a903"
+    },
+    {
+      "path": "P161Formal/SourceRenewalStops.lean",
+      "role": "scientific Lean source",
+      "bytes": 5031,
+      "sha256": "bf4a44c9a4d5a598ed60929dc8af48b33a83eb8079dd9aa519c9f7277ae844d9"
+    },
+    {
+      "path": "P161Formal/SourceRenewalSwitch.lean",
+      "role": "scientific Lean source",
+      "bytes": 6829,
+      "sha256": "101d93c2b29e09a1e6042a9fbb9b69abf642ee84d73cfb4f616621140b414d7d"
+    },
+    {
+      "path": "P161Formal/SourceResetAverage.lean",
+      "role": "scientific Lean source",
+      "bytes": 6153,
+      "sha256": "2ee4137a34478b76e8994914ec8580a2b52422ffc025b8c350b5b7415920f069"
+    },
+    {
+      "path": "P161Formal/SourceResetCertificate.lean",
+      "role": "scientific Lean source",
+      "bytes": 3305,
+      "sha256": "a77872aee284489646feab9bb851e8e2a5bd62dbc405c036b0f7f5ff4946b8c0"
+    },
+    {
+      "path": "P161Formal/SourceResetPointwise.lean",
+      "role": "scientific Lean source",
+      "bytes": 5731,
+      "sha256": "7386200a2f5aa2e1e631210ad71ab684c7961803b41c1b803073c09db06faf17"
+    },
+    {
+      "path": "P161Formal/SourceResetRateBounds.lean",
+      "role": "scientific Lean source",
+      "bytes": 3716,
+      "sha256": "63805565c05f16b91f991f51f6f4baa0c74e14b1031833f5398c6e1d2b13b438"
+    },
+    {
+      "path": "P161Formal/SourceSeedIntensity.lean",
+      "role": "scientific Lean source",
+      "bytes": 5873,
+      "sha256": "8de7e29b019dd9bdae39ffea37540f17df47827003e64191a269f85699d40944"
+    },
+    {
+      "path": "P161Formal/SourceSeedMoment.lean",
+      "role": "scientific Lean source",
+      "bytes": 3657,
+      "sha256": "18c276278710f0eaea1c55c7182cbfcc42cf02f1100b764c5a6652377b15d256"
+    },
+    {
+      "path": "P161Formal/SourceSeedTail.lean",
+      "role": "scientific Lean source",
+      "bytes": 4869,
+      "sha256": "fba5127b88668959d0e953b3398785da84e6b05d0008dc7fb0542217d02721c5"
+    },
+    {
+      "path": "P161Formal/SourceServiceChemical.lean",
+      "role": "scientific Lean source",
+      "bytes": 2946,
+      "sha256": "2e230c531537619980ec9c14e4c6bdf060b7dbf4fd4546b600e9f515778623b4"
+    },
+    {
+      "path": "P161Formal/SourceServiceDrift.lean",
+      "role": "scientific Lean source",
+      "bytes": 7352,
+      "sha256": "bd78a3a5581d1fa33e1751d8fa14bf1b18b454aa8f03edcfa41b883389165cf2"
+    },
+    {
+      "path": "P161Formal/SourceStockCounts.lean",
+      "role": "scientific Lean source",
+      "bytes": 7673,
+      "sha256": "a5d2aa16700af3f2a1f16acf660e3df24e9a8a84e4b3653e42873054839a1d1a"
+    },
+    {
+      "path": "P161Formal/SourceStockObservations.lean",
+      "role": "scientific Lean source",
+      "bytes": 7322,
+      "sha256": "13da41137102330d9bbf64ea1f1652bd27aaab9664ed90d6b848e45b9ae02927"
+    },
+    {
+      "path": "P161Formal/SourceStockProcessLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 5935,
+      "sha256": "3287fcbac9c68bd094591cc537deb7fad9e5684286135269528e0533e43b6851"
+    },
+    {
+      "path": "P161Formal/SourceStockSupport.lean",
+      "role": "scientific Lean source",
+      "bytes": 5329,
+      "sha256": "9557c8960b9cb75fb7ee23dcbcf449bf175ae976833387e61f582c6d28bd2f08"
+    },
+    {
+      "path": "P161Formal/SourceStoppedMissionBridge.lean",
+      "role": "scientific Lean source",
+      "bytes": 8042,
+      "sha256": "7b93ad7e1641b13ef8293b0d0d27262b97ad6bbd63274a1de90ee851b1d607c2"
+    },
+    {
+      "path": "P161Formal/SourceStoppedObservations.lean",
+      "role": "scientific Lean source",
+      "bytes": 4340,
+      "sha256": "c4489cfd60450a10f8e28e02a6b31bd94695e7fd5b7644d95c8eca9f99295285"
+    },
+    {
+      "path": "P161Formal/SourceTickBridge.lean",
+      "role": "scientific Lean source",
+      "bytes": 3435,
+      "sha256": "6eaae089714a7580623a5899be65d44e87941c61450dece9a12fe5510025c1ce"
+    },
+    {
+      "path": "P161Formal/SourceTimedRecovery.lean",
+      "role": "scientific Lean source",
+      "bytes": 3298,
+      "sha256": "1b52ce2ba48f352e19aaf770e9c24d0a5ff3ffb21876722dfe2d8ba7a4018c55"
+    },
+    {
+      "path": "P161Formal/StockArithmetic.lean",
+      "role": "scientific Lean source",
+      "bytes": 3409,
+      "sha256": "e6968ffbe44df58bb814d178aa374d7faab6f9a348d66af39e4bf827f7ac6691"
+    },
+    {
+      "path": "P161Formal/StrongGeometricChemistry.lean",
+      "role": "scientific Lean source",
+      "bytes": 15033,
+      "sha256": "2a9e3fd78b534947a5fbd6c4fe22be5b291b0c83693659d887e77a96f3b28fe4"
+    },
+    {
+      "path": "P161Formal/StrongPopulationWitness.lean",
+      "role": "scientific Lean source",
+      "bytes": 5020,
+      "sha256": "26f598bdc5424e89d72e06f0e80d6602e61d3a1651fb08edf822089d418c207d"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryArithmetic.lean",
+      "role": "scientific Lean source",
+      "bytes": 3905,
+      "sha256": "1a9dc9d24de2a83cdd312278adcdf7707c6e4ffe42a6820858c4c6ff2c1c2f74"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryCertificate.lean",
+      "role": "scientific Lean source",
+      "bytes": 7625,
+      "sha256": "3575c6a2cfa2e003da06d7a304e5f3dfd85914800450ed8ae06b4cd513fd5c88"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryProfile.lean",
+      "role": "scientific Lean source",
+      "bytes": 1671,
+      "sha256": "b9a65440aec96f336b45fa978e13d71b47aeb2012fea68c3918c0d8254d096e5"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryProperties.lean",
+      "role": "scientific Lean source",
+      "bytes": 1133,
+      "sha256": "23318e6070ff10774c1d09b3801e9a53c5e7b5f893d1752c3394a76b61bf251e"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows112To127.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "6eafc209c9c1e62ded9867e4d1cd1b1305eaa51fa8bd81ebecbe9c68229ca34d"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows128To143.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "7558c467857e0a1b88bc65d8042035575f25f776ce4fd5057e91f6bcfbc2711d"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows144To159.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "3cbb5543b0674a0030dde870618e52216b0296525504a121420ad9ebee832248"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows160To175.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "2b38def594de4634b40cccb4f512e88c86bef65a4c1d22458b929f77ac19881e"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows16To31.lean",
+      "role": "scientific Lean source",
+      "bytes": 3878,
+      "sha256": "15c1c7a7f86cc76df7bbaf8b12a651d124cfd893b9725410d143bc794054bb02"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows176To191.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "2db67b8c5595bb7c2230dd2f1d3880ac89499127bbc4a7a506c7323983da698c"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows192To207.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "f40cef1d8891ef733a8f7b39458cdc61f3e00dea84b10f686c133fdb51813314"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows208To223.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "21caf5a072567a796238a64a459f70b57a6babe45ba3a1abeec85e2190eaa681"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows224To239.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "3db9b33c36611cc28958124e2f27df09e424fb5416088c0a32a189e1944e93ad"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows240To255.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "6b641ea343d128f0e3c3068c3389180268973faf042dc411534ff02a84fb8fd6"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows256To271.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "baa4637a1d95e4e75f9ec4b28ee245c020733b6bf8c603fa003770abcfc89932"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows272To287.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "1f1e6c6645ab3b3dd722d54f6f1850f7c52da4bf5bcb2fc94b72aaba4bd36b63"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows288To303.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "01c00e92cacb3605e90906dc3c4829ec7a65f6a43f18439473bc3ccde0cf43a1"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows304To319.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "0066c40f986606fc22d9eb59f977f0b0ed874fb6e43e00a50905bcc21afe5d67"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows320To335.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "3846cfa136fa56700690d896f68b25b0f8a27299b125b26d2a4805bd0fb769de"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows32To47.lean",
+      "role": "scientific Lean source",
+      "bytes": 3878,
+      "sha256": "b6227c3ef09026467ca81f775a001f9e9c6f51579d98df5c51d3f8c3d61a627b"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows336To351.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "069788f75544f5d319ccda24904f948bde37be675162f5d605bf1221bd5212d8"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows352To367.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "82790edcefb1da302b326acbbda2121e5dee7b9df669afba45c17b5b797d40a8"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows368To383.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "530c723770d6a44003662aa8d4873d07c12062e65039c54a9ad1d03a85cc3b92"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows384To399.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "3c9665c985defb611ecf5a2df998ac574279a5666177b1e7ed4300c078b83386"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows400To415.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "10f6e1b9584e262060b43f2583eb5af9ef273309bdbb612d0f2213cce4e831f9"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows416To431.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "e1a15f9857f02d2e369b5bbd3ab2d8983f73d317b3d0d5634a80af819c3066d4"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows432To447.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "5c5ea049334e5bd4f1c92539fe01e5d0b8cb4fc157ca1b1e84a0d8cecb7bc961"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows448To463.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "564fef88c1ad5e764a6f2160a14cce0020c99a7ac53fa19442f79a847c8cadb3"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows464To479.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "bec014f75e83404e211e8736cdd09cec63aea348c3efdad874c56b997d411bd0"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows480To495.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "68755368711553e8fe9a2ac66a90a36475c9ce23ca99937cdf4f1cba256fe879"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows48To63.lean",
+      "role": "scientific Lean source",
+      "bytes": 3878,
+      "sha256": "fd9679329372e41b582120e38780f686e122ca1169f55ea609b48950fc1d13db"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows496To511.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "d1f84205eebf6a6481d0007bce5b7f3ceb8996d86de475fb219bbbe64f00ea0e"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows512To527.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "c431d865a595b6f6c64b32999efeb58bfe7fc5b3483d98662e53ad5888cd7811"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows528To543.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "6deb4e5e611beddde2a09af36898f11029f9cc9917a9c1da52b229cc68ceee45"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows544To559.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "c65f88dc0dafb03bf3691a9596b7b320e0668b7fab068edf9207bd326d3aad5f"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows560To575.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "85a80e0cc8a2db1c1089ae533a8f510d185ddea340aefd65e2a7c3295c0f2629"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows576To591.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "dcfcb5e3a47cb1af9885b4ae10aa486cff0b8b55a79b2d42b0641d09bf285e76"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows592To607.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "ec6381a99833bbc3dffe9264f27b4b09f798de674df82b1c049f3682c32d3b77"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows608To623.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "421a27875e74487b83216da998892cdd27ca307f8f5950d0c6c8d5fbcd4c5b20"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows624To639.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "f18a9c22e284fc9673603df575be114a14dafd5b1f56dd132922570af6ace0b3"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows640To655.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "a89e19e39c8b0c05ee4d601dadff3a8b2fc6baef3659c88256df91405d131155"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows64To79.lean",
+      "role": "scientific Lean source",
+      "bytes": 3878,
+      "sha256": "cf0ad88164ec65f24ed5523cb6ef51fe27f6134b5d0ac486111c15a953173435"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows656To671.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "24470e9d4c2c45054491fe86f85d831b5307b00b4c458736d1c49df7272638fc"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows672To687.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "00517b8141d8e84697c43ac55f770c3ed87d25606de600d1a05b5c5ade281191"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows688To703.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "e27110b45e8adcdff6da52af5aba223d4aeecdb08f667f9c6b77af1937aabc43"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows704To719.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "209f8ae515e77f5d254532b986f32f113df89c68261cce03e99e3d7034edeeb1"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows720To735.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "61876f1379a1c9365d3a9c9ae55c4a7ca2aa04beb76e6ced5ecf793ac19efd7f"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows736To751.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "61e757fae2eec69265b2d631b36ceb3fac28037e9715d9aeb095ead438dc7d6e"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows752To767.lean",
+      "role": "scientific Lean source",
+      "bytes": 3977,
+      "sha256": "3b15ace07acf3f84602a316ceea2aedce679cbaf97b8b98b3d09269449325ff9"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows768To768.lean",
+      "role": "scientific Lean source",
+      "bytes": 1021,
+      "sha256": "7401f3a576c9d9c595494945bdd1f01249440399c95575327bb6e77f0cc90732"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows80To95.lean",
+      "role": "scientific Lean source",
+      "bytes": 3878,
+      "sha256": "da7dfdb9e0f3dcbaaeced89027e63ab8041efc9b55ad41bced1f846d3e4f4e63"
+    },
+    {
+      "path": "P161Formal/StrongRecoveryRows96To111.lean",
+      "role": "scientific Lean source",
+      "bytes": 3951,
+      "sha256": "4786e9640ec48dbda080ed202aabca80c0dbf9cb15720e8647c9f5590dfc2d5f"
+    },
+    {
+      "path": "P161Formal/StrongResetAggregation.lean",
+      "role": "scientific Lean source",
+      "bytes": 2104,
+      "sha256": "a6e5ac651e7a16e02232c4ae9b2a0742811e6096ea917a2678650be41b0b62d5"
+    },
+    {
+      "path": "P161Formal/SubmarkovCountedWords.lean",
+      "role": "scientific Lean source",
+      "bytes": 4945,
+      "sha256": "13a6a96bfa0e1a3eb97314c495565a4f80b93a49a0c3bf7629b8028b26144a98"
+    },
+    {
+      "path": "P161Formal/TailEnclosureCertificate.lean",
+      "role": "scientific Lean source",
+      "bytes": 7777,
+      "sha256": "ab52783644b7736d09a55600f319d5ea87a17bdf405b2d7285ea46c609125664"
+    },
+    {
+      "path": "P161Formal/TailEnclosureInterface.lean",
+      "role": "scientific Lean source",
+      "bytes": 1205,
+      "sha256": "f844dcac0af2d1ebf50c3890c25f5b7e5d2ec18f21d61399abd8192c6e6c052c"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1008To1023.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "c41075b3af26bdae925a8b374a5e9275ee1a8acfd5c5edd150262dacf94d8f7d"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1024To1039.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "416ed013fa1225c8f683642408b5de23eb7f174667128f8d3287804552fca2fa"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1040To1055.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "5070b4411458bc3f9c30e0ba87b514addb898dc249f46789d70b10486a77426b"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1056To1071.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "e029e5e4dee94ff3c58aba8c96bb44d02eb389381e772191d7691d57f5db2ec9"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1072To1087.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "da4eb1fdd10b2c95c94754043ee9f2334ae2778c0ed2dbe48d2abb3afe459e3a"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1088To1103.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "26320674e0aa754bf51cf531653f0b8c6529dfa4979310f5d8a341fc89a3f30c"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1104To1119.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "df3dc92962e308e7b47c3a6ec6e26f5c910fe4d4e718d2ad268f686c7542287c"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1120To1135.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "89d052abb467714dad97e252ee14b1cd24dfdcd2bed91845a27b4d24bacd5490"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1136To1151.lean",
+      "role": "scientific Lean source",
+      "bytes": 2564,
+      "sha256": "2550b6e88d5fde16d9af9af04ed0591d0a4f14a757fa0f9f0472fe154d1ba938"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows1152To1165.lean",
+      "role": "scientific Lean source",
+      "bytes": 2316,
+      "sha256": "cc446e826648f6ed3627e3a83332306388de94b9312475450457f4d56bec2e50"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows512To527.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "494ec5400b63f3adf6f1376d899352ca97831af36c9d8d3038256891c6f8f210"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows528To543.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "47f33d4446d96ca67af0c6bfb384b244f5c3c1c9c798726b892e3eb42f600020"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows544To559.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "855f8e42330f807635ea72173c65ca33e39bd8bba14dfb52d96f69c079f94214"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows560To575.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "4c1ddf73ff543cf473ec2c81c02576e310682a13e62a6735309f040f0679e90c"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows576To591.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "76d180e4a83efbbe7c6e493f9494a481aad55253dc2260da301d292d3f87474e"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows592To607.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "103170d1b594d84e18e5fbce0b34265c187660d1e516eb0cd72978e6e6252d2b"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows608To623.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "1b857d20451c660beb681bdd8a6a11e22d1d834cfe775a70c18e7f820c27754e"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows624To639.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "52aba75fabcd9d7b6fa444e7a2956a33e44202e4e84395f5394371778a0e4cc8"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows640To655.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "4ab5470f5bf9ec3a247a62774ef84e7f7d9a96adf3e61a532549442cc9ac6a03"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows656To671.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "bf69fd5f1ca96cd37e7a9aa89241fd5baf33e7d965e78e39d112c81185347757"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows672To687.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "9e7e2da63abeb1886d57c40b7edc2cf2d58844a34588cd24f7654686a63ecace"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows688To703.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "15b14d646d65a8d25c746548ac307752189399d2b791efb8163653c6f28f5e06"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows704To719.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "4839b383d8174801b516f8f159a073448099cb4f5daf8e98a3c854fca0a7480b"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows720To735.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "6360c81c05ba1fbf020d7953160a9b84556f3d746c04a8581e220d6fda62530f"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows736To751.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "c73ec233bed85cc3a46f95a24aa32d5ffa18b0f4430a6e2454b6f88cf8c8f90d"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows752To767.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "11a72c300f97b70c73a19268212e8f95f22d688776c9c2067d3f011a2e41ddb5"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows768To783.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "c15b4806261a9fbe09663a6fd95ffb0070f29522d1912f26cf6c47ad0c7ebd39"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows784To799.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "23e3a582be7e7fc9b614c5c30fccd0932e8c8e2776788e5d689076ac4186d942"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows800To815.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "2f1b12d3e41ba04c3f0c9ec65f21502d58603ffde3da05cb8f6992c625a17a9a"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows816To831.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "66d360455f65740ab999ed5a45ad77671884a90c7c4daa47a4fd03a228f0cf96"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows832To847.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "fa17ded0ac446dd45fbc144ffd7ec37aacc1ec5e689ef857479780e0c5200d18"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows848To863.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "282f3fb4ec967a895e9b16561ac62f93109955a7eb512cb0ad06c9ff2b7bcd25"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows864To879.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "cf25a983ec3b274071b76a55d0d87dead2ea218e470dcb4a0c009d7e8168f867"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows880To895.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "7f064d6fd408224b5d7752f81e37bb2d47b4bd54da7ea1f3c8ccf45f825eef5b"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows896To911.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "3c04b2bcbd8794f1b52ed352fbf02672dfed6a2229acc276b7980559e7e73aec"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows912To927.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "0b65efbf03893651331f1821ae2b2c61f2218ecffc29c56c68d2967e50f1b4b7"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows928To943.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "7e68c3eb16263bb18096d781fe80006a962c8a68ac766496fc6ca6121e9247aa"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows944To959.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "c3bbca9298933587d5650007e638a2deb922b55250bd61b1e385bc0626fe19f3"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows960To975.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "bec736ae280579c7a5e7153dc70bd8f2ff2899f9e6eddc21cfcf127ca988f9f6"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows976To991.lean",
+      "role": "scientific Lean source",
+      "bytes": 2497,
+      "sha256": "a2e191776b9060da0b09236e79e3ce8356fd1c82428863e986e628fe5a3fbe82"
+    },
+    {
+      "path": "P161Formal/TailEnclosureRows992To1007.lean",
+      "role": "scientific Lean source",
+      "bytes": 2530,
+      "sha256": "1319e7ca00da4075bd2e3db3b66d42d232d08c6e25e46d8ccf14a10247e2cbf7"
+    },
+    {
+      "path": "P161Formal/WeightedCountedHistory.lean",
+      "role": "scientific Lean source",
+      "bytes": 4314,
+      "sha256": "6886c00bf420e2137d45c4e04ca7d669361ed08a0db0a7641f3dda03078decc9"
+    },
+    {
+      "path": "P161Formal/WeightedCountedPoisson.lean",
+      "role": "scientific Lean source",
+      "bytes": 3205,
+      "sha256": "60923aca35160516a24473e7ef0f96f68d4ecf382e8edd25110f10f0474741ed"
+    },
+    {
+      "path": "P161Formal/WeightedRawHistory.lean",
+      "role": "scientific Lean source",
+      "bytes": 10375,
+      "sha256": "d164a547bd5b29361a12da9d10f9345115a8611895ebc143572c84ab5df3725d"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "role": "scientific attribution and formal/conventional boundary",
+      "bytes": 1501,
+      "sha256": "13a230cce3b9e05ebf2fd858fb98fe9d19dde28bfee3a08d82ce53b69bfddb2b"
+    },
+    {
+      "path": "README.md",
+      "role": "mathematical exposition and reproduction instructions",
+      "bytes": 4498,
+      "sha256": "367a143d1146274c5add25383f46a619a4fc2b44dae0a8fe30e7188b5812e605"
+    },
+    {
+      "path": "Solution.lean",
+      "role": "independent entry interface",
+      "bytes": 53,
+      "sha256": "a56faebf314dc3a754f93e00530069b5e2298f96047ccde845e024dea83c0998"
+    },
+    {
+      "path": "comparator.json",
+      "role": "exact Comparator targets; no definition holes",
+      "bytes": 2829,
+      "sha256": "4b0543f0d8a14b9d6fa0e4a1cf0f13a4dc6121695a1f0b931603e15985e728bb"
+    },
+    {
+      "path": "formalization.yaml",
+      "role": "structured source-based formalization metadata",
+      "bytes": 6401,
+      "sha256": "a78034886251e48d43b2c691d8ce9a15154208f9baf5fee4cea0c5ae2a5f63d1"
+    },
+    {
+      "path": "lake-manifest.json",
+      "role": "pinned build dependency record",
+      "bytes": 3672,
+      "sha256": "55fc50a5113a34e1c25ea37ebf7e9b4348e034659e1398662052237fbb351c81"
+    },
+    {
+      "path": "lakefile.lean",
+      "role": "Lake project configuration",
+      "bytes": 711,
+      "sha256": "25c0d4913e4a883957a14799fd96bb30b5be8d03d70f0e4b6a3063fb13554a4c"
+    },
+    {
+      "path": "lean-toolchain",
+      "role": "pinned build dependency record",
+      "bytes": 29,
+      "sha256": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"
+    },
+    {
+      "path": "paper/Chemical_Heredity_Canonical_v2_2.pdf",
+      "role": "frozen conventional manuscript or essential support",
+      "bytes": 507718,
+      "sha256": "83d1f5111e767f5c42f647731b105b008a6564d3ef8a364cf0536593fb041993"
+    },
+    {
+      "path": "paper/Chemical_Heredity_Manuscript_Source.zip",
+      "role": "frozen conventional manuscript or essential support",
+      "bytes": 37082,
+      "sha256": "2d4db32ddc261c6e79ade42fa8fb5d60d9afb962339d760ca1f3bf7cd171abb2"
+    },
+    {
+      "path": "paper/RIGHTS.md",
+      "role": "frozen manuscript and supplement rights boundary",
+      "bytes": 615,
+      "sha256": "d4838bb85aef66528753b227a473e0e453de7412f5096e51e250a994ca5b7d9e"
+    },
+    {
+      "path": "paper/Supplement_S1.zip",
+      "role": "frozen conventional manuscript or essential support",
+      "bytes": 351909,
+      "sha256": "867794ab98172f9a8584e7547ded6923fd547263cb20236572ebaaedd6af3710"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/ArrivalSlicePartition.lean",
+      "role": "scientific Lean source",
+      "bytes": 5898,
+      "sha256": "06aa7977ee532d782711c67fd074517694981dca4db8ae7140c812407acc42fc"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3Capped.lean",
+      "role": "scientific Lean source",
+      "bytes": 10998,
+      "sha256": "8f75aebb0b72171dd033edff40f2ef2e214254ecda5501800a6072e0da9ee7af"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3CappedPathLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 27469,
+      "sha256": "dceb57e142dd8256e42ea183b1a683f0cb4e13ef0d90e68fefa5256a2bfc9fa8"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3Copying.lean",
+      "role": "scientific Lean source",
+      "bytes": 11580,
+      "sha256": "e490e0c636e819097c12975c9e9b63c25e804c7f5daef6fe430d4b5f4b7cc946"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3Core.lean",
+      "role": "scientific Lean source",
+      "bytes": 13823,
+      "sha256": "3aa209f976622c1b8bf802ad7b9aa203eb9a94e451a2801d8ef18ee1561bea77"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3Marked.lean",
+      "role": "scientific Lean source",
+      "bytes": 11689,
+      "sha256": "b0abf23828db7bdaabc3b3c850d212a1a5d4bfe80c009a896bfe811aabbcbba9"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3MarkedKernel.lean",
+      "role": "scientific Lean source",
+      "bytes": 8502,
+      "sha256": "b8efadd0c57f0ecf2885c84bd34242f22366ab3719bd4624114e71e8a1e1ebc6"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3RatePositive.lean",
+      "role": "scientific Lean source",
+      "bytes": 1436,
+      "sha256": "73e77b6c64f7c5bceaadd7579650245d75493483c29a399ba78ed5fd2d36b3c1"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3RawPathLift.lean",
+      "role": "scientific Lean source",
+      "bytes": 11715,
+      "sha256": "471d13c257c5d77ae92d3d82931032c566708dbb151f9c150b34b90bde0a44c9"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CF3RawStepLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 18337,
+      "sha256": "a40fd2b7e642bb7da7470f7501bd7e3d7a1b49ba1d127ef38a0aef64de5d130d"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CanonicalPathLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 5452,
+      "sha256": "833a55043870f26e9bd038a5ee30e6cdb5c22b164083fab61a90c229d5d37723"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/ClockStepResidual.lean",
+      "role": "scientific Lean source",
+      "bytes": 5283,
+      "sha256": "59e9e1c9d454d028cd621b296bd21efe47f4e15f5e580899cfb8e4eace7c2f50"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/CopyingMeasure.lean",
+      "role": "scientific Lean source",
+      "bytes": 3541,
+      "sha256": "bbba961cb0b34a1e9a70c6736dd4976df9ba254622463b156a54634d5d59e0c9"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/EventIndexLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 9325,
+      "sha256": "c2d428ad9a9f64a14cc3bf654c4fb3979304d16aa4c951319ae4549750ef5305"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/EventIndexStoppedLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 7926,
+      "sha256": "cfd895a766564d00e9d70b46b2f9409eab7cb4e144c6a3255df4ec4d349ac56a"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/EventIndexSuffix.lean",
+      "role": "scientific Lean source",
+      "bytes": 12118,
+      "sha256": "e2c505ddb2a3ed408f131572a7df32f4f599ba250947f26c06b9cb523dc16386"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/ExponentialResidual.lean",
+      "role": "scientific Lean source",
+      "bytes": 5363,
+      "sha256": "f95a1021c8fd415ffdd3bb100171c97da038c60b89ab8e14963415e291672702"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/GeneratorAdapter.lean",
+      "role": "scientific Lean source",
+      "bytes": 7534,
+      "sha256": "c7d30bb416ba664ab2376b154f15e579daf554912f97eddbe19f0915904ea10e"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/MarkedKernel.lean",
+      "role": "scientific Lean source",
+      "bytes": 6121,
+      "sha256": "bee6707335040b5d359223bc6c69687909e3ef259621611b31276e0529625bce"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/MarkedUniformization.lean",
+      "role": "scientific Lean source",
+      "bytes": 5924,
+      "sha256": "4d7eced83f5d8583b5918190b772008bc5297f9fccb7078078e5f14f7bd3266a"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/MissionQuotient.lean",
+      "role": "scientific Lean source",
+      "bytes": 10028,
+      "sha256": "4638248a0329aae786db2c5323e394604870599aad2aca6bccbefc1da027c56f"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/PhysicalCut.lean",
+      "role": "scientific Lean source",
+      "bytes": 8235,
+      "sha256": "a2a2ae803e776a65df539a473fdfc66cb8600fcc88825c4d83193c82fde61d93"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/PhysicalCutCylinders.lean",
+      "role": "scientific Lean source",
+      "bytes": 10330,
+      "sha256": "74244ddd1743919c43dfa517069ae21889d46e424fd4d0fe8f7812dc86413a2a"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/PhysicalCutGlobalLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 8280,
+      "sha256": "34e42079ad490b0386bbfcd7789f09c1e5008ed12ab2fabd9c1c275089ed4c3d"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/PhysicalCutJointLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 7960,
+      "sha256": "e1e1fc523a3e6e5828530285d0520f5e8bab7e325f0e18fc24e4b4a57b3b0149"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/PhysicalCutLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 15964,
+      "sha256": "04fb07af80b58db2380b615871e6df21ba9f1d5931e9cd606fb1b767f05a3dba"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/PhysicalCutMeasurable.lean",
+      "role": "scientific Lean source",
+      "bytes": 5739,
+      "sha256": "e18c68f0dadd6d161036e88ff6053c2078ccacf4aede8a593873a59ec271af29"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/PhysicalTimedCut.lean",
+      "role": "scientific Lean source",
+      "bytes": 6619,
+      "sha256": "4cbe8e11f8deeff26870b8f3f9864aaba74d6ead8a5591557d75ed2e35779e16"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/PrefixCutResidual.lean",
+      "role": "scientific Lean source",
+      "bytes": 7460,
+      "sha256": "2c57624453a094c9b8e069c1bf156ffbfa8e1fa35326bf2604dc490c380fc721"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/QuotientTransfer.lean",
+      "role": "scientific Lean source",
+      "bytes": 4217,
+      "sha256": "6f69f39918950c6f4c85972c66a6eec8e473288ad1139e5d5c4353a678fc313e"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/SourceBlockAmbient.lean",
+      "role": "scientific Lean source",
+      "bytes": 23510,
+      "sha256": "564b8bb10e091cf639d941f9319c045f03cd06356e3cac49236f08268d86569d"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/SourceBlockProtocol.lean",
+      "role": "scientific Lean source",
+      "bytes": 21079,
+      "sha256": "5cb0c8a1b31cf8755436d4dc2bd255ef13dae320cedcf4120511082e47e83be0"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/SourceKilled.lean",
+      "role": "scientific Lean source",
+      "bytes": 3969,
+      "sha256": "fcdc8fc4e88957236385575d630bbad368ab094b0a09c658a770f82bc35658ae"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/SourcePathExpectation.lean",
+      "role": "scientific Lean source",
+      "bytes": 15287,
+      "sha256": "28579b3506247a43ff8d741ad0f41491ba766392bb091f31bdeabba0bd3f1033"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/ExecutedWindows.lean",
+      "role": "scientific Lean source",
+      "bytes": 17446,
+      "sha256": "daa67d98b344af2efd1e80f02a4de216592a17b3727775e9062250361e1c5210"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/LedgerOffsets.lean",
+      "role": "scientific Lean source",
+      "bytes": 14952,
+      "sha256": "fb07b9c508c3adda456b3a6e14f3ffc8f842bef5a5cd3f65ade4aa897865d2e2"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/MarkedCountTail.lean",
+      "role": "scientific Lean source",
+      "bytes": 26582,
+      "sha256": "90d5ee427f53f777945aa7f21fff168317ecb361272dde1cdda15b1ec580b568"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/NoBoundaryArrival.lean",
+      "role": "scientific Lean source",
+      "bytes": 15241,
+      "sha256": "7f24df62223a5ce80b4918f869a31b0be0491be69be2de806d7f912df8efbe46"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/OperatedKernel.lean",
+      "role": "scientific Lean source",
+      "bytes": 12369,
+      "sha256": "ff025ad9e5f1a3eb938b5fee61d29315f8a9871d291ac32e10f0a28d93507ca6"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/OperatedObservations.lean",
+      "role": "scientific Lean source",
+      "bytes": 11679,
+      "sha256": "4dc6aa1eaa4d940f26863fad3b7236de3562472ced06db763f04e72a814b7dd8"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/PhysicalOperated.lean",
+      "role": "scientific Lean source",
+      "bytes": 15623,
+      "sha256": "b5081d3650a66b52454d6118e142cf308e751e14b4c648667d5a98769303fb83"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/PhysicalRecoveryStops.lean",
+      "role": "scientific Lean source",
+      "bytes": 13505,
+      "sha256": "1e6ed0d6789e2d6c4c43faf1b8306b3b48adb7a99587f13041e5e10c18f2ffad"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/PhysicalSplice.lean",
+      "role": "scientific Lean source",
+      "bytes": 11905,
+      "sha256": "2b16d1edb44e2c11957e97b9e274ad69ecc8f7c2762288b78d5793ca726f90fd"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/RawOperated.lean",
+      "role": "scientific Lean source",
+      "bytes": 23095,
+      "sha256": "18bfa09bc9174018b80fe81c6e577cd4253d8203f7c83244e4b663c6ca017d44"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/RawStoppedFuture.lean",
+      "role": "scientific Lean source",
+      "bytes": 22508,
+      "sha256": "6453e261bf2abd9c15c09383f174797c04379b4dd831669d00f27437f58ccca5"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/RecoveryStops.lean",
+      "role": "scientific Lean source",
+      "bytes": 11994,
+      "sha256": "b5a9ecc59ae3bd5b83c9b362aa36e1d74e3494c5a4b4424fcb0a885e26aa3adb"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/SeedSwitch.lean",
+      "role": "scientific Lean source",
+      "bytes": 42980,
+      "sha256": "f96b300daac703fc5d5a332d36e33d49ed0e54de8c6b8a0c884a572b3962e7d4"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/SentinelErasure.lean",
+      "role": "scientific Lean source",
+      "bytes": 13839,
+      "sha256": "e5147f129dcb936f47dafe0d84a11cdc414ed5fbbe55dba6d40873d2aa36418b"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V2/SwitchStockTail.lean",
+      "role": "scientific Lean source",
+      "bytes": 8009,
+      "sha256": "f84bab3468a657d5219ce628c3f4165e752b3a12144176206965405e14ec04ed"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V3/ActualWindows.lean",
+      "role": "scientific Lean source",
+      "bytes": 3212,
+      "sha256": "7ef4ea39d49c5a93d9562f46a2be6ecb24479cc8694fb2da807b2f9d1f05be0c"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V3/Observations.lean",
+      "role": "scientific Lean source",
+      "bytes": 7259,
+      "sha256": "6e2b82c3a08865883db0048fef041110141ae53f11f2a3c436bdf021366a64c4"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V3/Support.lean",
+      "role": "scientific Lean source",
+      "bytes": 2651,
+      "sha256": "485d24c6807460e988407e280af744994051960485883e59ac0bce806ec860fd"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V3/WindowIdentity.lean",
+      "role": "scientific Lean source",
+      "bytes": 10732,
+      "sha256": "29c26a47fb211397ce048bde3cda2f1ce5a5b287f908be08d0187e08f580fc3c"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V4/TwoPhaseEvent.lean",
+      "role": "scientific Lean source",
+      "bytes": 16445,
+      "sha256": "418dad57c79f47af2f4e4cc698bd1dac3834abe154313b4c59c2f55ba12230a8"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V4/TwoPhaseIdentity.lean",
+      "role": "scientific Lean source",
+      "bytes": 13277,
+      "sha256": "2a2fb4052876fd78dc94a8acdd9a7a7a68326095509db2e8ab80b62669415343"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V4/TwoPhaseLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 5802,
+      "sha256": "9f112c8f22856e89c0c3da1a0ca918fd483612cd14a027c600e2eaa39698e6e1"
+    },
+    {
+      "path": "proofs/CTMCHeredity20261019/V4/WindowSafety.lean",
+      "role": "scientific Lean source",
+      "bytes": 5074,
+      "sha256": "a5042f0e16c43307b784ed16f6c0a405da7d3d311f73bef5e3726b96384a5cba"
+    },
+    {
+      "path": "proofs/CompositionalMemory/BinomialAllocationMeasure.lean",
+      "role": "scientific Lean source",
+      "bytes": 2331,
+      "sha256": "61b1f8ea5610b0675e9b8f2e6f0b21c7ab40d686dd29a7bd11456f3aed68f766"
+    },
+    {
+      "path": "proofs/CompositionalMemory/BinomialAllocationMoments.lean",
+      "role": "scientific Lean source",
+      "bytes": 3374,
+      "sha256": "f0e3065b461e178d4afbee8890bbf3edbf8b56e9e2d4412ef0362ca25db94171"
+    },
+    {
+      "path": "proofs/FunctionalCapacity/Defs.lean",
+      "role": "scientific Lean source",
+      "bytes": 10638,
+      "sha256": "a35c226e8067eca7b73bf8939d49da80398ade134dba785c978ce143d82edba2"
+    },
+    {
+      "path": "proofs/FunctionalCapacity/Kernel.lean",
+      "role": "scientific Lean source",
+      "bytes": 26863,
+      "sha256": "5c1cc5c2ae9e46697c1410932176cd7c45a43608c8b23a23363eee88239d0af2"
+    },
+    {
+      "path": "proofs/FunctionalCapacity/Pop.lean",
+      "role": "scientific Lean source",
+      "bytes": 10988,
+      "sha256": "cd3ca4ad27102b920a229742a4e8de4850ba6016df35c8a4145bd06e506912fc"
+    },
+    {
+      "path": "proofs/FunctionalCapacity/SiteCF3.lean",
+      "role": "scientific Lean source",
+      "bytes": 13643,
+      "sha256": "067519bb8fabd45275957954a375158c61f127c3175c9c5a368b9e5c2097dfe9"
+    },
+    {
+      "path": "proofs/FunctionalCapacity/SiteCF3b.lean",
+      "role": "scientific Lean source",
+      "bytes": 10582,
+      "sha256": "c6bf5c83b155dab70937d7e59cab5ba8a8858dc90d9e3ea9dc197d032eaddbff"
+    },
+    {
+      "path": "proofs/FunctionalCapacity/SiteCF3c.lean",
+      "role": "scientific Lean source",
+      "bytes": 12030,
+      "sha256": "12d21e2a090f38c8d8f0ab2173d9e0a0ffdd7baf310709d94298dc77ca463595"
+    },
+    {
+      "path": "proofs/FunctionalCapacity/Tick.lean",
+      "role": "scientific Lean source",
+      "bytes": 10603,
+      "sha256": "ebf951fcf6a299fd89723a2d7fba63d9d2d4ea6bc882045555417225b47de220"
+    },
+    {
+      "path": "proofs/HeritableCompositions/BinomialMoment.lean",
+      "role": "scientific Lean source",
+      "bytes": 2052,
+      "sha256": "139f63050fb8a8ef9cd9052497a98bb8e482505b4481c082fe2ae97e104b1fd0"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/Channels.lean",
+      "role": "scientific Lean source",
+      "bytes": 3273,
+      "sha256": "b100c66d166ed3ae0a50f9e4db278fc79d551f077a6cf13a7442071cec0650ee"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/Cleanup.lean",
+      "role": "scientific Lean source",
+      "bytes": 2802,
+      "sha256": "b9d46e204d85453b3e6d68e2a4c70afb1f7ab37fc26cbc3586eb5a34f7e7f1c2"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockCountSlice.lean",
+      "role": "scientific Lean source",
+      "bytes": 5351,
+      "sha256": "7491cf3eb6aca715047b9414f64334a3d027ea698bfcfec83a0179d7184fde9c"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockFunctional.lean",
+      "role": "scientific Lean source",
+      "bytes": 1248,
+      "sha256": "1e7b2b09565c4724dfb6a43726fdd40c3fef12cdfedac104860cb0faced48830"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockHistoryFactorization.lean",
+      "role": "scientific Lean source",
+      "bytes": 4848,
+      "sha256": "ffad6d399a482f4aabab5e01cef4be376b6827cbd93a07ede6efd814ce5832c4"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockInitial.lean",
+      "role": "scientific Lean source",
+      "bytes": 3123,
+      "sha256": "190ef25b6ddb226a25e9527e898b97c4f13f9bf0f665fb14245c646946e9bfe0"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockInterpolation.lean",
+      "role": "scientific Lean source",
+      "bytes": 3107,
+      "sha256": "638c4937cab8b7ce82def63f0cb5d109a04e8fe3a33a28cff0a6dbf181aceb12"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockStep.lean",
+      "role": "scientific Lean source",
+      "bytes": 6900,
+      "sha256": "36cd849eac5e7b6f0567cc3955e8ea6e7cf7cd9205c99bb3e6ac156e8e2c0da1"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockSupport.lean",
+      "role": "scientific Lean source",
+      "bytes": 4367,
+      "sha256": "463be55f584d68b7e494a589394b7f0689928b82cb7b67be40652aea70b00629"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockSurvival.lean",
+      "role": "scientific Lean source",
+      "bytes": 2766,
+      "sha256": "073a41388d3c187ef6844db5dbea22fb3a5f5e1116aacbfee6c6c0cd18bdd8d4"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/ClockSurvivalConvolution.lean",
+      "role": "scientific Lean source",
+      "bytes": 3886,
+      "sha256": "517c109f0695f989b03b3402e324d179aebbbc769da05c06bd52c20f072ab39e"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/Composition.lean",
+      "role": "scientific Lean source",
+      "bytes": 1585,
+      "sha256": "4c32f744c7da79cd178f6fa3f1f083a9ac8783238cec57fffd1603d72602e5f8"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/EventArrival.lean",
+      "role": "scientific Lean source",
+      "bytes": 9226,
+      "sha256": "44a6dd4e36babc8ae7b0e0253194e85841c94ee310960eba151f4d6595afbf82"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/EventHorizon.lean",
+      "role": "scientific Lean source",
+      "bytes": 6055,
+      "sha256": "b08186c8b944aa766fae8e21514fe64c6f85e31a1221af3093c38ef383f5f39c"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/EventInvariant.lean",
+      "role": "scientific Lean source",
+      "bytes": 2397,
+      "sha256": "e1702c84eb8083f3778adbd2f12b047805fee26accfe2ea818e31bcdbd8d91e2"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/EventMartingale.lean",
+      "role": "scientific Lean source",
+      "bytes": 5562,
+      "sha256": "e9520e662db4eff5b7f88ec34d443e9383060dfc3038eb39fc8a1f65a1847b2e"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/EventMaximal.lean",
+      "role": "scientific Lean source",
+      "bytes": 2891,
+      "sha256": "15cf6447aad882c77d9aa4d290cc16adeac076b8f5a7c963b7aa02bb8c982f05"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/EventPaths.lean",
+      "role": "scientific Lean source",
+      "bytes": 5346,
+      "sha256": "61ccc20e5e28c7331f67f678743b2f8379fa995a1c2bea0b89f753b57657c164"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/EventVariance.lean",
+      "role": "scientific Lean source",
+      "bytes": 6398,
+      "sha256": "50a63f84883ab991021f938a7c6143db4ce891d97cfffca63a1fbf03df0018f4"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/FiniteBounds.lean",
+      "role": "scientific Lean source",
+      "bytes": 5166,
+      "sha256": "846f1090cd9c9cc15ab7c51237fb2150d972074ec875cdfd359c3bfb2bc18109"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/FiniteKernel.lean",
+      "role": "scientific Lean source",
+      "bytes": 5794,
+      "sha256": "b3630b2e8f212e6e89d0d401f91bfa491eeb033b710c7892b33b56a6b5404faf"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/GeneratorIntegral.lean",
+      "role": "scientific Lean source",
+      "bytes": 8005,
+      "sha256": "c714dd7a25c76a1df80bc231df703d832883305eaeb6e469e95257b03c9a15b1"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/HistoryObservables.lean",
+      "role": "scientific Lean source",
+      "bytes": 3264,
+      "sha256": "86ea324958755b7241a3b839c6842703b18d390f33a314261e88dcc3c4c83fbc"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/HoldingTime.lean",
+      "role": "scientific Lean source",
+      "bytes": 3242,
+      "sha256": "82c72271d15d42d327809d88b0df562554c28c54644e0a4a1cab3948db5414b7"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/PathExit.lean",
+      "role": "scientific Lean source",
+      "bytes": 2514,
+      "sha256": "be80cab4153a1a4a4fbe942b97fc3fc3f423de6e4e16f9a81b03afc33fcec9cd"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/PoissonConvolution.lean",
+      "role": "scientific Lean source",
+      "bytes": 1618,
+      "sha256": "2f1bd18f75ced2650cdd19a02a56b35b76524a033cd90ee58b5526ec3889a1cb"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/PoissonExit.lean",
+      "role": "scientific Lean source",
+      "bytes": 3700,
+      "sha256": "fd80371adf83c30158ad3d1ad44942586a2e1f53035cdcf3515981b68f798bd0"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/PoissonKernel.lean",
+      "role": "scientific Lean source",
+      "bytes": 4231,
+      "sha256": "9031f746a0d63a5f5de13a339cb33495a4a444adace06010749b09fea696bea8"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/PrefixFactorization.lean",
+      "role": "scientific Lean source",
+      "bytes": 1687,
+      "sha256": "fa64ef7c074117ec2cb62d9001ac4e597629bc393ac0027fc3ddf1ea4aba14df"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/PrefixReward.lean",
+      "role": "scientific Lean source",
+      "bytes": 1853,
+      "sha256": "fa0d50e8781807ec060395e4c5b23121d9b2b5f6ad03832052897cd0bae8d32d"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/SkeletonPaths.lean",
+      "role": "scientific Lean source",
+      "bytes": 4857,
+      "sha256": "0b94d09021ca4280b3b77247da316ad13c69be1cd33b4cea298dc12af7c69ff8"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/StateHistory.lean",
+      "role": "scientific Lean source",
+      "bytes": 3907,
+      "sha256": "b86c09c12ffa15cd02455802754ae60f4373aecc5ae3b2eaa1bbf5de6592acd3"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/SurvivalCoupling.lean",
+      "role": "scientific Lean source",
+      "bytes": 5817,
+      "sha256": "4bf4e2f631e69bf6b161bc49658db01dcd2c26595d2f9d2eb471e541735cf66b"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/TimedEndpoint.lean",
+      "role": "scientific Lean source",
+      "bytes": 1936,
+      "sha256": "ae79bc64889ac4b6f8346d2f01146b7bf3162a937b13818d4af0e2987e196054"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/TimedEndpointTransfer.lean",
+      "role": "scientific Lean source",
+      "bytes": 3327,
+      "sha256": "4652e57bbe18ee577338a9358e587c341baaeae576338879e7e0641c5ee1ab9e"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/TimedHistoryLaw.lean",
+      "role": "scientific Lean source",
+      "bytes": 4604,
+      "sha256": "37572df8dbf87733d74b78a1819c7368dfcb651d2f5b4c1d0a4524b602042b72"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/TimedPathExit.lean",
+      "role": "scientific Lean source",
+      "bytes": 3432,
+      "sha256": "92cfe78e26e6af6bf80e40535dc248e39e2e8d63967d5d6cc177e108d5055260"
+    },
+    {
+      "path": "proofs/HybridCTMCInfrastructure/TimedProcess.lean",
+      "role": "scientific Lean source",
+      "bytes": 6846,
+      "sha256": "aae137e7fdf091a0d06eac3dec3120e9be46b609ecfa8dcf46bed40f9c0c9ec2"
+    },
+    {
+      "path": "proofs/TemplateFreeHeredity/FairBinomialTail.lean",
+      "role": "scientific Lean source",
+      "bytes": 6091,
+      "sha256": "adeb1b2ba6b46340c3826bdeee6066b56270982720c9a9c8f6cafc4316b9be61"
+    },
+    {
+      "path": "scripts/reproduce.py",
+      "role": "validation and explicitly supervised optional replay",
+      "bytes": 3154,
+      "sha256": "6e6b7bfd7321531c1afadd67cc2c319819152fe0b309c02a0789a6da80ce3acb"
+    },
+    {
+      "path": "verification/LOCAL_VERIFICATION.json",
+      "role": "source-bound local strict/comparison/individual replay evidence",
+      "bytes": 2726,
+      "sha256": "c892e18d4ae5d964274061ee97d84b578c80fa7a58e3067c715f504f89825931"
+    },
+    {
+      "path": ".github/workflows/palomar-check.yml",
+      "role": "manual-only official full cloud check; not dispatched",
+      "bytes": 591,
+      "sha256": "36f731e6ec40d9f59b434c21f3b8d24cc940d0e79eb0d24c388f3356409b07be"
+    }
+  ],
+  "manifest_self_hash": "recorded by the enclosing private package manifest"
+}
