@@ -1,6 +1,6 @@
 version: v0.4
 project:
-  name: "Chemical heredity without genetic templates: acquisition, reproduction and retained function"
+  name: "Chemical heredity without genetic templates"
   description: "Acquisition and retention of catalytic function are established for a four-compartment chemical model with three prescribed catalyst types and finite resources. Starting with at least 512 copies of each of two old catalyst types per compartment, arbitrary candidate counts and arbitrary fuel occupancy, a seeding phase ends at time 30. At the fixed beta = 4,000,000 operating point, the joint mission through time 60 has failure probability at most 0.004517975690072193. It includes applicable count floors of 16 for both actual complementary daughters, 3,000,000 service credits, at least five initiating divisions per compartment after seed withdrawal, and eleven current-population recoveries interleaved with ten selected actual divisions by time 55.5. Seven simultaneous resource ceilings are enforced by one finite-stock process, with the first attempted excess entering failure. The proof connects the marked physical-time law, deterministic seed withdrawal, stopped recovery and resource accounting to the complete mission."
   authors:
   - Michael Mislan

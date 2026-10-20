@@ -2061,8 +2061,8 @@
     {
       "path": "README.md",
       "role": "mathematical exposition and reproduction instructions",
-      "bytes": 4498,
-      "sha256": "367a143d1146274c5add25383f46a619a4fc2b44dae0a8fe30e7188b5812e605"
+      "bytes": 4449,
+      "sha256": "053802402c19b87c6a9a4b8a70b1a82ad1a4f7e0964efabe5a20e739bdbe1d4c"
     },
     {
       "path": "Solution.lean",
@@ -2079,8 +2079,8 @@
     {
       "path": "formalization.yaml",
       "role": "structured source-based formalization metadata",
-      "bytes": 6401,
-      "sha256": "a78034886251e48d43b2c691d8ce9a15154208f9baf5fee4cea0c5ae2a5f63d1"
+      "bytes": 6352,
+      "sha256": "340596dc38ae71a62c21beaa63caac7c9dbf810a49eb63c208413e01ada86e2b"
     },
     {
       "path": "lake-manifest.json",
